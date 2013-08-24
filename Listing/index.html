@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="../css/mstyle.css" />
+<link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
+<link rel="stylesheet" href="../css/jquery-ui-1.10.3.custom.css" />
+<title>Spring Semester West Campus Lease</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../js/javaScript.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<!-- background dim -->
+    <div id="dim" style="display:none"></div>
+
+    <!-- login box -->
+    <div id="loginBox" style="display: none">
+        <div id="between">
+            <input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
+            <input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
+                <div id="logs">
+                    <input id="remember" type="checkbox" name="remember" />Remember Me
+                    <a href="" id="signIn">
+                      <div id="sign-in">
+                        Sign In
+                      </div>
+                    </a>
+                </div>
+        </div>
+        <div class="signUp"> <a href="../Registration/">Sign up now!</a> </div>
+    </div>
+  	<header>
+        <div id="topBar2">
+            <div id="cornerImg"><a href="../"><img src="../img/keyLogo.png" class="mini"/></a></div>
+            <div class="searchTop"> 
+                <a href="#" id="loginTrigger">
+                    <input type="button" name="signIn" value="Sign In" id="si"/></a>
+                <a href="../Post/">
+                    <input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+                <!-- search bar -->
+                <div class="headerMiddle">
+                    <input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
+                    <a href="../Results/">
+                        <div id="resultButton"><img src="../img/searchicon.png" id="searchicon"/>Search</div></a>  
+                </div>  
+            </div>
+        </div>
+        <div class="hiddenTab">
+            <div class="amenContainer">
+                &nbsp;<b>Price</b> Max:
+                <div class="filter-style2">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">Drop down</option>
+                        <option value="">Text Input</option>
+                        <option value="">or Slider?</option>
+                    </select>  
+                </div>
+                &nbsp;<b>Type</b>:
+                <div class="filter-style5">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">House</option>
+                        <option value="">Apartment/Condo</option>
+                        <option value="">Duplex</option>
+                        <option value="">Dorm</option>
+                        <option value="">Other</option>
+                    </select>  
+                </div>
+                  &nbsp;&nbsp;<b>Bed</b>&nbsp;
+                  Min:
+                <div class="filter-style6">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7+</option>
+                    </select>
+                </div>
+                &nbsp;&nbsp;<b>Bath</b>&nbsp;
+                 Min:
+                <div class="filter-style6">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">1</option>
+                        <option value="">1.5</option>
+                        <option value="">2</option>
+                        <option value="">2.5</option>
+                        <option value="">3</option>
+                        <option value="">3.5</option>
+                        <option value="">4+</option>
+                    </select>
+                </div>
+                <a href="#" id="blessed"><div>Show Menu +</div></a>
+            </div>
+            <br />
+        </div>
+        <div id="underTab" style="margin-top:-33px;">
+        <div class="hiddenAmenMenu">
+            <div style="width:250px; height: 80px; float:right; text-align:right; font-size:13px; line-height:25px;">
+
+                 <b>Duration:</b>&nbsp;&nbsp;Min: <input type="textbox" name="minmonth" value="" class="sideMonths"/>
+                    Max: <input type="textbox" name="maxmonth" value="" class="sideMonths"/>
+                    <br />
+                 Earliest Move In Date:
+                <div class="filter-style2" style="width:100px;  border:1px solid #ccc; margin-right:0px; margin-top:15px;">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">Date Picker</option>
+                    </select>  
+                </div>
+                <br />
+                Latest Move In Date:
+                <div class="filter-style2" style="width:100px;  border:1px solid #ccc; margin-right:4px;">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">Date Picker</option>
+                    </select>  
+                </div>
+            </div>
+
+            <div class="amenMenu">
+                <div>
+                    <ul class="amenList">
+                        <li>Unimportant<input type="Radio" id="unimportant" name="unimportant" value="1" /><label for="unimportant"><img src="../img/box1.png"/></label></li>
+                        <li>Important<input type="Radio" id="important" name="important" value="2" /><label for="important"><img src="../img/box2.png"/></label></li>
+                        <li>Deal Breaker<input type="Radio" id="deal"name="deal" value="3" /><label for="unimportant"><img src="../img/box3.png"/></label></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList" style="">
+                        <li>Parking Spot <input type="Radio" name="parking" value="1" /><input type="Radio" name="parking" value="2" /><input type="Radio" name="parking" value="3" /></li>
+                        <li>Dishwasher<input type="Radio" name="diswash" value="1" /><input type="Radio" name="dishwash" value="2" /><input type="Radio" name="dishwash" value="3" /></li>
+                        <li>Furnished<input type="Radio" name="furnish" value="1" /><input type="Radio" name="furnish" value="2" /><input type="Radio" name="furnish" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Washer/Dryer<input type="radio" name="laundry" value="1" /><input type="radio" name="laundry" value="2" /><input type="radio" name="laundry" value="3" /></li>
+                        <li>Pool<input type="Radio" name="pool" value="1" /><input type="Radio" name="pool" value="2" /><input type="Radio" name="pool" value="3" /></li>
+                        <li>Central A/C<input type="Radio" name="ac" value="1" /><input type="Radio" name="ac" value="2" /><input type="Radio" name="ac" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Pet Friendly<input type="Radio" name="pets" value="1" /><input type="Radio" name="pets" value="2" /><input type="Radio" name="pets" value="3" /></li>
+                        <li>Gym<input type="Radio" name="gym" value="1" /><input type="Radio" name="gym" value="2" /><input type="Radio" name="gym" value="3" /></li>
+                        <li>Balcony<input type="Radio" name="balcony" value="1" /><input type="Radio" name="balcony" value="2" /><input type="Radio" name="balcony" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Walk-In Closet<input type="Radio" name="closet" value="1" /><input type="Radio" name="closet" value="2" /><input type="Radio" name="closet" value="3" /></li>
+                        <li>Alarm System<input type="Radio" name="alarm" value="1" /><input type="Radio" name="alarm" value="2" /><input type="Radio" name="alarm" value="3" /></li>
+                        <li>Gated Community<input type="Radio" name="gated" value="1" /><input type="Radio" name="gated" value="2" /><input type="Radio" name="gated" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Security Guard<input type="Radio" name="guard" value="1" /><input type="Radio" name="guard" value="2" /><input type="Radio" name="guard" value="3" /></li>
+                        <li>Video Surveillance<input type="Radio" name="video" value="1" /><input type="Radio" name="video" value="2" /><input type="Radio" name="video" value="3" /></li>
+                        <li>Clubhouse<input type="Radio" name="club" value="1" /><input type="Radio" name="club" value="2" /><input type="Radio" name="club" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Study Room<input type="Radio" name="study" value="1" /><input type="Radio" name="study" value="2" /><input type="Radio" name="study" value="3" /></li>
+                        <li>Business center<input type="Radio" name="business" value="1" /><input type="Radio" name="business" value="2" /><input type="Radio" name="business" value="3" /></li>
+                        <li>Private bathroom<input type="Radio" name="privateBath" value="1" /><input type="Radio" name="privateBath" value="2" /><input type="Radio" name="privateBath" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Handicap Accessible<input type="Radio" name="hAcc" value="1" /><input type="Radio" name="hAcc" value="2" /><input type="Radio" name="hAcc" value="3" /></li>
+                        <li>Handicap ramps<input type="Radio" name="hRamp" value="1" /><input type="Radio" name="hRamp" value="2" /><input type="Radio" name="hRamp" value="3" /></li>
+                        <li>Nearby Bus Access<input type="Radio" name="bus" value="1" /><input type="Radio" name="bush" value="2" /><input type="Radio" name="bus" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Elevators<input type="Radio" name="elevator" value="1" /><input type="Radio" name="elevator" value="2" /><input type="Radio" name="elevator" value="3" /></li>
+                        <li>Handicap ramps<input type="Radio" name="hRamp" value="1" /><input type="Radio" name="hRamp" value="2" /><input type="Radio" name="hRamp" value="3" /></li>
+                        <li>Nearby Bus Access<input type="Radio" name="bus" value="1" /><input type="Radio" name="bus" value="2" /><input type="Radio" name="bus" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Private vs shared bedroom <br/><input type="Radio" name="shared" value="1" /><input type="Radio" name="shared" value="2" /><input type="Radio" name="shared" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Stainless steel appliances <br/><input type="Radio" name="stainless" value="1" /><input type="Radio" name="stainless" value="2" /><input type="Radio" name="stainless" value="3" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    
+    
+    <div class="container-fluid"><!-- WIDTH IS 425PX ------------------------------------>
+        <div id="maincontent">
+            <div class="row-fluid">
+                <div id="property">
+                    <div id="left">
+                        <div id="generalInfo">
+                            <h3>Spring Semester West Campus</h3> 
+                            <p>Street Address, State, Zip Code<br />2 Bedroom, 1.5 Bathroom</p>
+                            <p><b>$1,200 per Month</b></p>
+                            <center><button>Try Roommate Match</button>
+                                <br /><br />
+                            </center>
+                        </div>
+                        <div id="availability">
+                            <h3>Check Availability</h3>
+                            <br /><br />
+                            <textarea name="name" style="height:20px; width:150px; font-family:Georgia, 'Times New Roman', Times, serif;
+                                font-size:.875em; resize:none; color:rgb(51,62,106); margin-bottom:10px;" placeholder="Name"></textarea>
+                            <br />
+                            <textarea name="email" placeholder="E-mail" style="height:20px; width:200px; font-family:Georgia, 'Times New Roman', Times, serif;
+                                font-size:.875em; resize:none; color:rgb(51,62,106); margin-bottom:10px;"></textarea>
+                            <br />
+                            <textarea name="phone" style="height:20px; width:150px; font-family:Georgia, 'Times New Roman', Times, serif;
+                                font-size:.875em; resize:none; color:rgb(51,62,106); margin-bottom:10px;" placeholder="Phone #"></textarea>
+                            <br />
+                            <textarea name="question" style="height:75px; width:275px; font-family:Georgia, 'Times New Roman', Times, serif;
+                                font-size:.875em; resize:none; color:rgb(51,62,106);" placeholder="Questions"></textarea>
+                            <br /><div onClick="availabilitySent();" style="cursor:pointer"><button>Send</button></div>
+                        </div>
+                        <div id="availSent" style="display:none;">
+                            <h3>Check Availability</h3>
+                            <p>Your availability check request has been successfully submitted!</p>
+                            <p>Towers will send you an email shortly with information regarding available units that match your cirteria. If you do not receive an email from Towers after 5 business days, please contact <a href="mailto:support@freshmansupport.com">Support@FreshmanSupport.com</a>.</p>
+                            <p>In the meantime, please feel free to check availability for any other properties that you are interested in.</p>
+                        </div>
+                    </div>
+                    <div id="right">
+                        <div id="dormTour">
+                            <div id="videoWrap">
+                                <ul>
+                                    <li><div id="video"></div></li>
+                                </ul>
+                            </div>
+                            <div id="pics">
+                                <ul>
+                                    <li><img src="../../img/property/place2.png" /></li>
+                                    <li><img src="../../img/property/place2.png" /></li>
+                                    <li><img src="../../img/property/place2.png" /></li>
+                                </ul>
+                            </div>
+                            <div id="pics">
+                                <ul>
+                                    <li><img src="../../img/property/place2.png" /></li>
+                                    <li><img src="../../img/property/place2.png" /></li>
+                                    <li><img src="../../img/property/place2.png" /></li>
+                                </ul>
+                            </div>
+                            <div id="pics">
+                                <ul>
+                                    <li><img src="../../img/property/place2.png" /></li>
+                                    <li><img src="../../img/property/place2.png" /></li>
+                                    <li><img src="../../img/property/place2.png" /></li>
+                                </ul>
+                            </div>    
+                        </div>
+                        <div id="desc">
+                            <h3>Description</h3>
+                                <p>
+                                    Paragraphs and words and words and paragraphs.
+                                    Paragraphs and words and words and paragraphs.
+                                    Paragraphs and words and words and paragraphs. 
+                                    Paragraphs and words and words and paragraphs.
+                                    Paragraphs and words and words and paragraphs. 
+                                    Paragraphs and words and words and paragraphs.
+                                    Paragraphs and words and words and paragraphs.
+                                </p>
+                                <p>      
+                                    Paragraphs and words and words and paragraphs.
+                                    Paragraphs and words and words and paragraphs.
+                                    Paragraphs and words and words and paragraphs.
+                                    Paragraphs and words and words and paragraphs.
+                                    Paragraphs and words and words and paragraphs.
+                                    Paragraphs and words and words and paragraphs.
+                                    Paragraphs and words and words and paragraphs.
+                                    </p>
+                        </div>
+                        <div id="pricing">
+                            <h3>Amenities</h3>
+                            <div id="wrap">
+                                <div id="col">
+                                    <div id="item"><p>Num. of <br>Bedrooms</p></div>
+                                    <ul>
+                                        <li>.5</li>
+                                        <li>.5</li>
+                                        <li>.5</li>
+                                    </ul>
+                                </div>
+                                <div id="col">
+                                    <div id="item"><p>Occupancy per Bedrooms</p></div>
+                                    <ul>
+                                        <li>Efficiency</li>
+                                        <li>Efficiency</li>
+                                        <li>40</li>
+                                    </ul>
+                                </div>
+                                <div id="col">
+                                    <div id="item"><p>Price per Month per Bedroom</p></div>
+                                    <ul>
+                                        <li>$1</li>
+                                        <li>1200-1500 USD</li>
+                                        <li>25 cents</li>
+                                    </ul>
+                                </div>
+                                
+                                <div id="col">
+                                    <div id="item"><p>Floor plan</p></div>
+                                    <ul>
+                                        <li>pic</li>
+                                        <li>pic</li>
+                                        <li>pic</li>
+                                    </ul>
+                                </div> 
+                            </div>
+                            <p>
+                                Leases are per academic year. Prices shown above are lease prices divided by ten months. To find the total price of a lease multiply the numbers abover by ten.
+                            </p>
+                            <p>Note: Prices are subject to change.</p>
+                        </div> 
+                    </div><!-- clses right container -->
+                </div>
+            </div>
+        </div>
+    </div>
+<footer id="footer">
+  <div>
+      <a href="../Registration/" >register  </a> |
+        <a href="../About/">about  </a> |
+        <a href="../Terms/">terms  </a> |
+        <a href="../Privacy/">privacy  </a> |
+        <a href="../Contact/"> contact us</a> 
+    </div>
+</footer>
+  
+</div><!--closes the wrapper class -->
+</body>
+</html>

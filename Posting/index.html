@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="../css/mstyle.css" />
+<link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
+<link rel="stylesheet" href="../css/jquery-ui-1.10.3.custom.css" />
+<title>Post a Lease</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../js/javaScript.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+  		<header >
+        <div id="topBar3">
+            <div id="cornerImg"><a href="../"><img src="../img/logo.png" class="mini"/></a></div>
+                <a href="#" id="loginTrigger"><input type="button" name="signIn" value="Sign In" id="si"/></a>
+                <a href="../Lessor/"><input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+            </div>
+    </header>
+   
+    	<!-- background dim -->
+    	<div id="dim" style="display:none"> </div>
+        
+        <div class="Content2">
+    
+    		<!-- login box -->
+    		<div id="loginBox" style="display: none">
+                <div id="between">
+                    <input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
+                    <input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
+                    <div id="logs">
+                        <input id="remember" type="checkbox" name="remember" />Remember Me
+                        <a href="" id="signIn">
+                    		<div id="sign-in">
+                    			Sign In
+                    		</div>
+                    	</a>
+                    </div>
+                </div>
+                <div class="signUp"> <a href="../Registration/">Sign up now!</a> </div>
+            </div>
+           &nbsp;
+    		
+    
+    		<!-- Main Content -->
+    	
+    
+    		<div class="listbox2">
+            
+      			<div id="lessor-header">
+      				<h1>My Listings</h1>
+      			</div>
+
+      				<div class="postListing">
+       	  				<img id="listingPicture" src="../img/dog.jpg" />
+       	  				<a href="../Listing/">
+          					<h2> Macaroni's Penthouse </h2>
+          				</a>
+          				<br />
+        				<div id="listingButtons">  
+       						<a href="">
+                                <input class="message" type="image" src="../img/message.jpg" alt="button" /></a> 
+                            <a href="">
+                                <input class="message" type="image" src="../img/app.jpg" alt="button" /></a> 
+                            <a href="">Edit</a>
+                            <h5>last updated: May 18, 2013</h5>
+            			</div>
+        				<h3> 9999 Salado St. Austin, TX </h3>
+            			<h4></h4>
+            				<span>$6,000 per Month</span>      
+      				</div>
+      
+      				<div class="postListing">
+      					<div id="bgray">
+               	  			<img id="listingPicture" src="../img/james.jpg" />
+       	  					<a href="../Listing/">
+          						<h2> James' House </h2></a>
+       		   				<br />
+        					<div id="listingButtons">  
+                                <a href="">
+                                    <input class="message" type="image" src="../img/message.jpg" alt="button" /></a> 
+                                <a href="">
+                                    <input class="message" type="image" src="../img/app.jpg" alt="button" /></a> 
+                                <a href="">Edit</a>
+                                <h5>last updated: May 18, 2013</h5>
+                            </div>
+        					<h3> Wonderland, Austin, TX </h3>
+            				<h4></h4>
+            					<span>$30,000 per Month</span>  
+           				 </div>  
+      				</div>
+      
+      				<p>&nbsp;</p>
+      				<div id="wut"><a href="../Lessor/">Post A Listing</a></div>
+                    <p>&nbsp;</p>
+                    
+			</div><!-- closes the listbox -->	
+  		</div><!-- closes the content -->
+	</div><!-- closes the wrapper class-->
+	<footer id="footer2">
+		<div class="about3">
+    	<a href="../Registration/">register  </a> |
+        <a href="../About/">about  </a> |
+        <a href="../Terms/">terms  </a> |
+        <a href="../Privacy/">privacy  </a> |
+        <a href="../Contact/"> contact us</a> 
+    </div>
+	</footer>
+</body>
+</html>

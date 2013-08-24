@@ -1,0 +1,223 @@
+<!--<?php 
+    session_start();
+	$searchCity = "";
+	$searchDate = "";
+	$error = false;
+
+	if (!isset($_POST["submit"]))	{
+		$_SESSION["start"] = $_SERVER['REQUEST_TIME'];	
+	}
+	if (isset($_POST["submit"]))	{
+		if (isset($_POST["searchCity"]))	$searchCity = $_POST["searchCity"];
+		if (isset($_POST["searchDate"]))	$searchDate = $_POST["searchDate"];
+		if ((!empty($searchCity)) && (!empty($searchDate))) {
+		 	$_SESSION["searchCity"] = $searchCity;
+			$_SESSION["searchDate"] = $searchDate;
+			Header("Location: SubleaseCentralSERP.html");
+		}
+		else	{
+			$error = true;
+		}
+	}
+?>-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="css/mstyle.css" />
+<link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
+<link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.css" />
+<meta charset="UTF-8" />
+<title>Sublease Central</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/javaScript.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body id="homepage">
+    <div class="wrapper">
+        <!-- Header when somebody is logged in. The Nav bar is contained in wrapper-demo class -->
+        <header >
+            <div id="topBar3">
+            <div id="cornerImg"><a href="index.html"><img src="img/keyLogo.png" class="mini"/></a></div>
+            <a href="#" id="loginTrigger">
+        	    <div class="wrapper-demo">
+                    <div id="dd" class="wrapper-dropdown-5" tabindex="1"><b>email@host.com</b>
+			          <ul class="dropdown">
+				       <li><a href="Account/"><i class="icon-user"></i>Account</a></li>
+				       <li><a href="Account/Favorite/"><i class="icon-cog"></i><img src="img/menuStar.png"/>Favorites</a></li>
+				       <li><a href="Account/Alerts/"><i class="icon-cog"></i><img src="img/bell.png"/>Alerts</a></li>
+				       <li><a href="Account/Roommate/"><i class="icon-cog"></i><img src="img/profile.png"/>Roomate Profile</a></li>
+				       <li><a href="Account/Inbox/"><i class="icon-cog"></i><img src="img/mail.png"/>Inbox</a></li>
+				       <li><a href="Account/Properties"><i class="icon-user"></i>Property Listings</a></li>
+				       <li><a href="#"><i class="icon-user"></i><img src="img/gear.png"/>Properties</a></li>
+				       <li><a href="#"><i class="icon-user"></i><img src="img/data.png"/>Statistics</a></li>
+				       <li><a href="index.html"><i class="icon-remove"></i>Log out</a></li>
+			          </ul>
+		            </div>
+	            </div>
+         </header>
+        <!-- background dim -->
+    	<div id="dim" style="display:none"> </div>  		
+        <!-- login box -->
+            <div id="loginBox" style="display: none">
+                <div id="between">
+                    <input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
+                    <input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
+                    <div id="logs">
+                        <input id="remember" type="checkbox" name="remember" />Remember Me
+                        <a href="" id="signIn">
+                            <div id="sign-in">
+                                Sign In
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="signUp"> <a href="Registration/">Sign up now!</a> </div>
+            </div>
+    		<script type="text/javascript">
+    			function DropDown(el) {
+    				this.dd = el;
+    				this.initEvents();
+    			}
+    			DropDown.prototype = {
+    				initEvents : function() {
+    					var obj = this;
+
+    					obj.dd.on('click', function(event){
+    						$(this).toggleClass('active');
+    						event.stopPropagation();
+    					});	
+    				}
+    			}
+    			$(function() {
+
+    				var dd = new DropDown( $('#dd') );
+
+    				$(document).click(function() {
+    					// all dropdowns
+    					$('.wrapper-dropdown-5').removeClass('active');
+    				});
+
+    			});
+    		</script>
+        <form action="Results/">
+
+            <div id="split">
+                <!-- Search Bar -->
+                <div id="search-box">   
+                    <input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code"  style="width:550px; margin-left:1px;"/>
+                    <a href="Results/"><div id="resultButton">
+                      <img src="img/searchicon.png" id="searchicon"/>&nbsp;Search</div>
+                    </a>  
+                    &nbsp;-or-&nbsp;
+                    <a href="Post/">
+                        <input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+                    <a href="#" id="menu-trigger2">Show More
+                        <input type="image" src="img/arrow2.png"  alt="" class="more" /></a> 
+                    <a href="#" id="lessTrigger2" style="display:none;">Show Less
+                        <input type="image" id="upArrow"src="img/Up Arrow.png"  alt="" class="more" /></a> 
+                </div>
+            </div>
+            <!-- Advanced options box for search -->
+            <div id="menu" style="display: none"> 
+                <table class="menuTable">
+                    <tr>
+                        <td id="menuTablePrice">
+                            <div id="miniPrice"><b>Price Per Month:</b>
+                                <div id="slider2" style=" color:white;"><div id="slider-range"></div></div>
+                                <div id="priceDisplay"><input type="text" id="amount" style="border: 0; color: white;" /></div>
+                            </div></td>
+                        <td id="menuTableDuration">
+                            &nbsp;<b>Duration (months):</b>&nbsp;&nbsp;&nbsp;&nbsp;Min: <input type="textbox" name="minmonth" value="" class="months"/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Max: <input type="textbox" name="maxmonth" value="" class="months"/>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <h3>Property Details:</h3>
+                <br /><br />
+                <div id="propDetails">
+                    Type &nbsp;
+                    <div class="filter-style2">
+                        <select>
+                            <option value="" style="display:none;"></option>
+                            <option value="">House</option>
+                            <option value="">Apartment/Condo</option>
+                            <option value="">Duplex</option>
+                            <option value="">Dorm</option>
+                            <option value="">Other</option>
+                        </select>  
+                    </div>
+                    &nbsp;&nbsp;
+                    Min. Bed &nbsp;
+                    <div class="filter-style3">
+                        <select>
+                            <option value="" style="display:none;"></option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                        </select>
+                    </div>
+                    &nbsp;&nbsp;
+                    Min. Bath &nbsp;
+                    <div class="filter-style3">
+                        <select>
+                            <option value="" style="display:none;"></option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                        </select>
+                    </div>
+                </div>
+                <br /><br />
+
+                <!-- Amenities drop down menu -->
+                <table class="amen">
+                    <div><h3>Amenities: </h3></div>
+                    <br />
+                    <tr>
+                        <td ><input type="checkbox" name="amen" value="1" />
+                        Furnished</td>
+                        <td ><input type="checkbox" name="amen" value="1" />
+                        Parking spot</td>
+                        <td ><input type="checkbox" name="amen" value="1" />
+                        Washer/Dryer</td>
+                        <td ><input type="checkbox" name="amen" value="1" />
+                        Pet friendly</td>
+                        <td ><input type="checkbox" name="amen" value="1" />
+                        Gym</td>
+                    </tr>
+                    <tr>
+                        <td ><input type="checkbox" name="amen" value="1" />
+                        Central A/C</td>
+                        <td ><input type="checkbox" name="amen" value="1" />
+                        Dishwasher</td>
+                        <td ><input type="checkbox" name="amen" value="1" />
+                        Pool</td>
+                        <td ><input type="checkbox" name="amen" value="1" />
+                        Balcony</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div><!--closes menu div-->
+        </form>
+        <!-- static footer-->
+        <footer id="footer">
+            <div>
+                <a href="Registration/">register  </a> |
+                <a href="About/">about  </a> |
+                <a href="Terms/">terms  </a> |
+                <a href="Privacy/">privacy  </a> |
+                <a href="Contact/" > contact us</a> 
+            </div>
+        </footer>
+    </div><!--closes the wrapper div -->
+</body>
+</html>

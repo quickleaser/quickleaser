@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="../css/mstyle.css" />
+<link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
+<link rel="stylesheet" href="../css/jquery-ui-1.10.3.custom.css" />
+<title>Search Listings</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../js/javaScript.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+   <!-- background dim -->
+    <div id="dim" style="display:none; margin-top:-85px;"> </div>  
+      <!-- login box -->
+      <div id="loginBox" style="display: none">
+        <div id="between">
+          <input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
+          <input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
+          <div id="logs">
+            <input id="remember" type="checkbox" name="remember" />Remember Me
+            <a href="" id="signIn"><div id="sign-in">Sign In</div></a>
+          </div>
+        </div>
+        <div class="signUp"> <a href="../Registration/">Sign up now!</a> </div>
+      </div>
+
+    <header style="position:fixed;">
+        <div id="topBar2">
+            <div id="cornerImg"><a href="../"><img src="../img/keyLogo.png" class="mini"/></a></div>
+
+            <div class="searchTop"> 
+            <a href="#" id="loginTrigger">
+                <input type="button" name="signIn" value="Sign In" id="si"/></a>
+            <a href="../Post/">
+                <input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+            
+            <!-- Location and Date Search Box-->
+               
+               <div class="headerMiddle">
+                <input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
+                <a href="index.html">
+                    <div id="resultButton"><img src="../img/searchicon.png" id="searchicon"/>Search</div></a>  
+                   </div>
+        </div>
+        </div>
+        <div class="hiddenTab" style="position: fixed;">
+            <div class="amenContainer">
+                &nbsp;<b>Price</b> Max:
+                <div class="filter-style2">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">Drop down</option>
+                        <option value="">Text Input</option>
+                        <option value="">or Slider?</option>
+                    </select>  
+                </div>
+                    &nbsp;<b>Type</b>:
+                <div class="filter-style5">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">House</option>
+                        <option value="">Apartment/Condo</option>
+                        <option value="">Duplex</option>
+                        <option value="">Dorm</option>
+                        <option value="">Other</option>
+                    </select>  
+                </div>
+                  &nbsp;&nbsp;<b>Bed</b>&nbsp;
+                  Min:
+                <div class="filter-style6">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7+</option>
+                    </select>
+                </div>
+                &nbsp;&nbsp;<b>Bath</b>&nbsp;
+                 Min:
+                <div class="filter-style6">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">1</option>
+                        <option value="">1.5</option>
+                        <option value="">2</option>
+                        <option value="">2.5</option>
+                        <option value="">3</option>
+                        <option value="">3.5</option>
+                        <option value="">4+</option>
+                    </select>
+                </div>
+                <a href="#" id="blessed"><div>Show Menu +</div></a>
+            </div>
+            <br />
+        </div>
+        <div id="underTab">
+        <div class="hiddenAmenMenu">
+            <div style="width:250px; height: 80px; float:right; text-align:right; font-size:13px; line-height:25px;">
+
+            	 <b>Duration:</b>&nbsp;&nbsp;Min: <input type="textbox" name="minmonth" value="" class="sideMonths"/>
+                    Max: <input type="textbox" name="maxmonth" value="" class="sideMonths"/>
+                    <br />
+                 Earliest Move In Date:
+                <div class="filter-style2" style="width:100px;  border:1px solid #ccc; margin-right:0px; margin-top:15px;">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">Date Picker</option>
+                    </select>  
+                </div>
+                <br />
+                Latest Move In Date:
+                <div class="filter-style2" style="width:100px;  border:1px solid #ccc; margin-right:4px;">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">Date Picker</option>
+                    </select>  
+                </div>
+            </div>
+
+            <div class="amenMenu">
+            	<div>
+                    <ul class="amenList">
+                        <li>Unimportant<input type="Radio" id="unimportant" name="unimportant" value="1" /><label for="unimportant"><img src="../img/box1.png"/></label></li>
+                        <li>Important<input type="Radio" id="important" name="important" value="2" /><label for="important"><img src="../img/box2.png"/></label></li>
+                        <li>Deal Breaker<input type="Radio" id="deal"name="deal" value="3" /><label for="unimportant"><img src="../img/box3.png"/></label></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList" style="">
+                        <li>Parking Spot <input type="Radio" name="parking" value="1" /><input type="Radio" name="parking" value="2" /><input type="Radio" name="parking" value="3" /></li>
+                        <li>Dishwasher<input type="Radio" name="diswash" value="1" /><input type="Radio" name="dishwash" value="2" /><input type="Radio" name="dishwash" value="3" /></li>
+                        <li>Furnished<input type="Radio" name="furnish" value="1" /><input type="Radio" name="furnish" value="2" /><input type="Radio" name="furnish" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Washer/Dryer<input type="radio" name="laundry" value="1" /><input type="radio" name="laundry" value="2" /><input type="radio" name="laundry" value="3" /></li>
+                        <li>Pool<input type="Radio" name="pool" value="1" /><input type="Radio" name="pool" value="2" /><input type="Radio" name="pool" value="3" /></li>
+                        <li>Central A/C<input type="Radio" name="ac" value="1" /><input type="Radio" name="ac" value="2" /><input type="Radio" name="ac" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Pet Friendly<input type="Radio" name="pets" value="1" /><input type="Radio" name="pets" value="2" /><input type="Radio" name="pets" value="3" /></li>
+                        <li>Gym<input type="Radio" name="gym" value="1" /><input type="Radio" name="gym" value="2" /><input type="Radio" name="gym" value="3" /></li>
+                        <li>Balcony<input type="Radio" name="balcony" value="1" /><input type="Radio" name="balcony" value="2" /><input type="Radio" name="balcony" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                	<ul class="amenList">
+                        <li>Walk-In Closet<input type="Radio" name="closet" value="1" /><input type="Radio" name="closet" value="2" /><input type="Radio" name="closet" value="3" /></li>
+                        <li>Alarm System<input type="Radio" name="alarm" value="1" /><input type="Radio" name="alarm" value="2" /><input type="Radio" name="alarm" value="3" /></li>
+                        <li>Gated Community<input type="Radio" name="gated" value="1" /><input type="Radio" name="gated" value="2" /><input type="Radio" name="gated" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                	<ul class="amenList">
+                        <li>Security Guard<input type="Radio" name="guard" value="1" /><input type="Radio" name="guard" value="2" /><input type="Radio" name="guard" value="3" /></li>
+                        <li>Video Surveillance<input type="Radio" name="video" value="1" /><input type="Radio" name="video" value="2" /><input type="Radio" name="video" value="3" /></li>
+                        <li>Clubhouse<input type="Radio" name="club" value="1" /><input type="Radio" name="club" value="2" /><input type="Radio" name="club" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                	<ul class="amenList">
+                        <li>Study Room<input type="Radio" name="study" value="1" /><input type="Radio" name="study" value="2" /><input type="Radio" name="study" value="3" /></li>
+                        <li>Business center<input type="Radio" name="business" value="1" /><input type="Radio" name="business" value="2" /><input type="Radio" name="business" value="3" /></li>
+                        <li>Private bathroom<input type="Radio" name="privateBath" value="1" /><input type="Radio" name="privateBath" value="2" /><input type="Radio" name="privateBath" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                	<ul class="amenList">
+                        <li>Handicap Accessible<input type="Radio" name="hAcc" value="1" /><input type="Radio" name="hAcc" value="2" /><input type="Radio" name="hAcc" value="3" /></li>
+                        <li>Handicap ramps<input type="Radio" name="hRamp" value="1" /><input type="Radio" name="hRamp" value="2" /><input type="Radio" name="hRamp" value="3" /></li>
+                        <li>Nearby Bus Access<input type="Radio" name="bus" value="1" /><input type="Radio" name="bush" value="2" /><input type="Radio" name="bus" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                	<ul class="amenList">
+                        <li>Elevators<input type="Radio" name="elevator" value="1" /><input type="Radio" name="elevator" value="2" /><input type="Radio" name="elevator" value="3" /></li>
+                        <li>Handicap ramps<input type="Radio" name="hRamp" value="1" /><input type="Radio" name="hRamp" value="2" /><input type="Radio" name="hRamp" value="3" /></li>
+                        <li>Nearby Bus Access<input type="Radio" name="bus" value="1" /><input type="Radio" name="bus" value="2" /><input type="Radio" name="bus" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                	<ul class="amenList">
+                        <li>Private vs shared bedroom <br/><input type="Radio" name="shared" value="1" /><input type="Radio" name="shared" value="2" /><input type="Radio" name="shared" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                	<ul class="amenList">
+                        <li>Stainless steel appliances <br/><input type="Radio" name="stainless" value="1" /><input type="Radio" name="stainless" value="2" /><input type="Radio" name="stainless" value="3" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    	</div>
+  	</header> 
+    <!-- middle content container -->
+    <div class="Content2">
+        <form action="index.html">
+    		<div class="topRack">
+    	    	<div class="sortBy">
+    				<select id="filter">
+	                  <option value="">Sort By</option>
+	                  <option value="">Price</option>
+	                  <option value="">Start Date</option>
+    				</select>  
+   				</div> 
+    	   		<a href="map/"><div id="mapButton" style="background-color: #488BFE; float:right; color:white;">Map</div></a>
+    	   		<a href="../"><div id="listButton" style="background-color: rgb(225,225,225); float:right;">List</div></a>
+            </div>
+    		<div class="listboxSERP">
+ 				<!-- Splits the content container in two parts (left for listings / right for map, amenities etc. -->
+        		<div class="LeftRail">
+        			<!-- Listings header-->
+       	 			<div id="searchResults">
+            			<h1>{#} of Results in {city}, {state}</h1>	  
+                    </div>
+
+            		<!-- ----------Dummy Listing---------(main example, use this with php input) -->
+        			<div class="postings" style="background-color: rgb(225,225,225);">
+                		<div id="picContainer">
+                  			<a href="" id="testCap"><img id="listingPicture2" src="../img/dog.jpg" />
+                    		<span>5 More Photos</span>
+                  			</a>
+                		</div>
+          				<img id="star" src="../img/Star Outline.png" />
+       	  				<a href="../Listing/">
+       	  					<!-- Letter for each listings -->
+          					<img class="letter" src="../img/A Pin.png"/>
+          					<h2> Macaroni's Penthouse </h2>
+          				</a>
+          				<br />
+                		<div id="infoPost">
+            				<span>$455 per Month </span>
+            				<h3> 2 bed 1.5 bath Duplex </h3>
+                		</div>
+                		<div id="lower">  
+                  			<div> 
+                    			<br /><br />
+                    			<a href="#" id="subMenuTrigger" >
+            			    		<input type="image" src="../img/arrow2.png"  alt="#" class="moreInfo" /> Show More</a>
+                    			<a href="#" id="lessTrigger" style="display:none;">
+            			    		<input type="image" src="../img/Up Arrow.png"   alt="#" class="moreInfo" /> Show Less</a>
+                    		</div>
+            			</div>
+      				</div>       
+                	<div id="miniMore" style="display: none; background-color: rgb(225,225,225);">
+                    	<div id="pictureSide">
+                          <img class="sidePic" src="http://t0.gstatic.com/images?q=tbn:ANd9GcTJPSa8hJQ2NYG_wegOspe4YT2v8sVB2InMknNDB3jajzE8ngEe" />          
+                          <img class="sidePic" src="http://t2.gstatic.com/images?q=tbn:ANd9GcR6zBi9ipxnGtGrpaIQpOq8WrEs2WiGI24NDMEEAo4Ftg8E71rwcg" />
+                          <img class="sidePic" src="http://t0.gstatic.com/images?q=tbn:ANd9GcQSsSQIYaNYc-2xODb9Eaxjs5KAKhjPDZrIf8WMMQGNszaFAiDa5Q" />
+                          <img class="sidePic" src="http://t2.gstatic.com/images?q=tbn:ANd9GcR6zBi9ipxnGtGrpaIQpOq8WrEs2WiGI24NDMEEAo4Ftg8E71rwcg" />
+                          <img class="sidePic" src="http://t0.gstatic.com/images?q=tbn:ANd9GcQSsSQIYaNYc-2xODb9Eaxjs5KAKhjPDZrIf8WMMQGNszaFAiDa5Q" />
+                      	</div>
+                        <table class="details">
+                            <tr><td class="label">2 bed 1.5 bath Duplex:  1200 ft <sup>2</sup></td></tr>
+	                        <tr>
+	                            <td class="labeltext">We have negotiated a limited number of apartments for spring-only leases, January - July. This is an exceptional opportunity because nearly all other apartments in West Campus are rented on a year-long basis. This lease is located at Quarter's Cameron House which is located in West Campus (where the majority of UT students live), and ... <a style="color:blue;, font-weight:600;" href="">read more</a>
+	                            </td>
+	                        </tr>
+                        </table>                  
+                        <table class="amenTable">
+	                        <tr>
+	                        	<td class="amenCol"><li>Furnished</li></td>
+	                            <td class="amenCol"><li>Parking Spot</li></td>
+	                        	<td class="amenCol"><li>Washer/Dryer</li></td>
+	                            <td class="amenCol"><li> A/C</li></td>
+	                        	<td class="amenCol"><li>Dishwasher</li></td>
+	                        </tr>
+	                        <tr>
+	                            <td class="amenCol"><li>Pool</li></td>
+	                        	<td class="amenCol"><li>Pet friendly</li></td>
+	                            <td class="amenCol"><li>Gym</li></td>
+	                        	<td class="amenCol"></td>
+	                            <td class="amenCol"></td>
+	                        </tr>
+	                    </table>
+              		</div>
+
+<!-- Test listings, it's contained in a div (postings) -->
+<div class="postings" style="background-color: rgb(225,225,225);">
+<div id="picContainer">
+<a href="" id="testCap">
+<img id="listingPicture2" src="../img/austin.jpg" />
+<span>3 More Photos</span>
+</a>
+</div>
+
+
+<img id="star" src="../img/Star Outline.png" />
+<a href="../Listing/">
+<img src="../img/B Pin.png" style="width:20px; float:left; margin-top:10px; margin-right:5px;" /><h2> District at Soco  </h2>
+</a>
+<br />
+<div id="infoPost">
+<span>$1,238 per Month </span>
+
+<h3> 3 bed 2.5 bath House </h3>
+</div>
+<div id="lower">  
+<div> 
+<br />
+<br />
+<a href="#"  >
+<input type="image" src="../img/arrow2.png"  alt="#" class="moreInfo" /> Show More</a>
+<a href="#"  style="display:none;">
+<input type="image" src="../img/Up Arrow.png"   alt="#" class="moreInfo" /> Show Less</a>
+</div>
+</div>
+<br style="clear:both;"/>
+</div>
+
+
+
+
+<!-- Test listings (sorry for the bad spacing, this info is just a placement test, use top lsiting for real data -->
+<div class="postings" >
+<div id="picContainer">
+<a href="" id="testCap">
+<img id="listingPicture2" src="../img/wayne.jpg" />
+<span>4 More Photos</span>
+</a>
+</div> 
+<img id="star" src="../img/Star Outline.png" />
+<a href="../Listing/">
+<img src="../img/C Pin.png" style="width:20px; float:left; margin-top:10px; margin-right:5px;" /><h2> Wayne Manor  </h2>
+</a>
+<br />
+<div id="infoPost">
+<span>$50,000 per Month  </span>
+
+<h3> 15 bed 15 bath House </h3>
+</div>
+<div id="lower">  
+<div> 
+<br />
+<br />
+<a href=""  >
+<input type="image" src="../img/arrow2.png"  alt="#" class="moreInfo" /> Show More</a>
+<a href=""  style="display:none;">
+<input type="image" src="../img/Up Arrow.png"   alt="#" class="moreInfo" /> Show Less</a>
+</div>
+</div>
+<br style="clear:both;"/>
+</div>
+
+
+
+<!-- Test listings, it's contained in a div (postings)-->
+<div class="postings" >
+<div id="picContainer">
+<a href="" id="testCap">
+<img id="listingPicture2" src="../img/james.jpg" />
+<span>More Photos</span>
+</a>
+</div>
+
+
+<img id="star" src="../img/star.png" />
+<a href="../Listing/">
+<img src="../img/D Pin.png" style="width:20px; float:left; margin-top:10px; margin-right:5px;" /><h2> James' Mansion </h2>
+</a>
+<br />
+<div id="infoPost">
+<span>$1,000,000 per Month  </span>
+
+<h3> 20 bed 25 bath House </h3>
+</div>
+<div id="lower">  
+<div> 
+<br />
+<br />
+<a href="" >
+<input type="image" src="../img/arrow2.png"  alt="#" class="moreInfo" /> Show More</a>
+<a href=""  style="display:none;">
+<input type="image" src="../img/Up Arrow.png"   alt="#" class="moreInfo" /> Show Less</a>
+</div>
+</div>
+<br style="clear:both;"/>
+</div>
+
+
+<!-- Test listings, it's contained in a div (postings)-->
+<div class="postings" >
+<div id="picContainer">
+<a href="" id="testCap">
+<img id="listingPicture2" src="../img/austin.jpg" />
+<span>3 More Photos</span>
+</a>
+</div>
+
+
+<img id="star" src="../img/Star Outline.png" />
+<a href="../Listing/">
+<img src="../img/E Pin.png" style="width:20px; float:left; margin-top:10px; margin-right:5px;" /><h2> District at Soco  </h2>
+</a>
+<br />
+<div id="infoPost">
+<span>$1,238 per Month </span>
+
+<h3> 3 bed 2.5 bath House </h3>
+</div>
+<div id="lower">  
+<div> 
+<br />
+<br />
+<a href="#"  >
+<input type="image" src="../img/arrow2.png"  alt="#" class="moreInfo" /> Show More</a>
+<a href="#"  style="display:none;">
+<input type="image" src="../img/Up Arrow.png"   alt="#" class="moreInfo" /> Show Less</a>
+</div>
+</div>
+<br style="clear:both;"/>
+</div>
+
+
+
+
+<!-- Test listings, it's contained in a div (postings)-->
+<div class="postings" >
+<div id="picContainer">
+<a href="" id="testCap">
+<img id="listingPicture2" src="../img/wayne.jpg" />
+<span>4 More Photos</span>
+</a>
+</div>
+
+
+<img id="star" src="../img/Star Outline.png" />
+<a href="../Listing/">
+<img src="../img/F Pin.png" style="width:20px; float:left; margin-top:10px; margin-right:5px;" /><h2> Wayne Manor  </h2>
+</a>
+<br />
+<div id="infoPost">
+<span>$50,000 per Month  </span>
+
+<h3> 15 bed 15 bath House </h3>
+</div>
+<div id="lower">  
+<div> 
+<br />
+<br />
+<a href=""  >
+<input type="image" src="../img/arrow2.png"  alt="#" class="moreInfo" /> Show More</a>
+<a href=""  style="display:none;">
+<input type="image" src="../img/Up Arrow.png"   alt="#" class="moreInfo" /> Show Less</a>
+</div>
+</div>
+<br style="clear:both;"/>
+</div>
+
+
+
+<!-- Test listings, it's contained in a div (postings)-->
+<div class="postings" >
+<div id="picContainer">
+<a href="" id="testCap">
+<img id="listingPicture2" src="../img/james.jpg" />
+<span>More Photos</span>
+</a>
+</div>
+
+
+<img id="star" src="../img/star.png" />
+<a href="../Listing/">
+<img src="../img/G Pin.png" style="width:20px; float:left; margin-top:10px; margin-right:5px;" /><h2> James' Mansion </h2>
+</a>
+<br />
+<div id="infoPost">
+<span>$1,000,000 per Month  </span>
+
+<h3> 20 bed 25 bath House </h3>
+</div>
+<div id="lower">  
+<div> 
+<br />
+<br />
+<a href="" >
+<input type="image" src="../img/arrow2.png"  alt="#" class="moreInfo" /> Show More</a>
+<a href=""  style="display:none;">
+<input type="image" src="../img/Up Arrow.png"   alt="#" class="moreInfo" /> Show Less</a>
+</div>
+</div>
+<br style="clear:both;"/>
+</div>
+
+                <br />  
+                <!-- View all section -->
+                <div id="viewAll">      
+                    <br /> 
+                    <a href="">1 - 2 - 3 - 4 >> | Last</a>
+                </div>   
+      		</div><!-- closes the left Rail -->
+
+			<!-- right Rail of the container that includes the google map and drop down menus-->
+  			<div class="rightRail">
+   				<!-- script for google map -->
+      			<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+      			<script>
+		            var map;
+		            function initialize() {
+		              var mapOptions = {
+		              zoom: 11,
+		              center: new google.maps.LatLng(30.2669,-97.7428),
+		              mapTypeId: google.maps.MapTypeId.ROADMAP
+		            };
+		            map = new google.maps.Map(document.getElementById('serpMap'),mapOptions);
+		  
+		            var icon1 = new google.maps.MarkerImage(
+		              "../img/A Pin.png", //url
+		              null,
+		              null,
+		              new google.maps.Point(0, 0), 
+		              new google.maps.Size(20, 26) //size
+		            );
+
+		            var icon2 = new google.maps.MarkerImage(
+		              "../img/B Pin.png", //url
+		              null,
+		              null,
+		              new google.maps.Point(0, 0), 
+		              new google.maps.Size(20, 26) //size
+		            );
+		            var icon3 = new google.maps.MarkerImage(
+		              "../img/C Pin.png", //url
+		              null,
+		              null,
+		              new google.maps.Point(0, 0), 
+		              new google.maps.Size(20, 26) //size
+		            );
+		            var icon4 = new google.maps.MarkerImage(
+		              "../img/D Pin.png", //url
+		              null,
+		              null,
+		              new google.maps.Point(0, 0), 
+		              new google.maps.Size(20, 26) //size
+		            );
+		            var icon5 = new google.maps.MarkerImage(
+		              "../img/E Pin.png", //url
+		              null,
+		              null,
+		              new google.maps.Point(0, 0), 
+		              new google.maps.Size(20, 26) //size
+		            );
+		            var icon6 = new google.maps.MarkerImage(
+		              "../img/F Pin.png", //url
+		              null,
+		              null,
+		              new google.maps.Point(0, 0), 
+		              new google.maps.Size(20, 26) //size
+		            );
+		            var icon7 = new google.maps.MarkerImage(
+		              "../img/G Pin.png", //url
+		              null,
+		              null,
+		              new google.maps.Point(0, 0), 
+		              new google.maps.Size(20, 26) //size
+		            );
+		            var icon8 = new google.maps.MarkerImage(
+		              "../img/H Pin.png", //url
+		              null,
+		              null,
+		              new google.maps.Point(0, 0), 
+		              new google.maps.Size(20, 26) //size
+		            );
+		            var icon9 = new google.maps.MarkerImage(
+		              "../img/I Pin.png", //url
+		              null,
+		              null,
+		              new google.maps.Point(0, 0), 
+		              new google.maps.Size(20, 26) //size
+		            );
+
+		            position1 = new google.maps.LatLng(30.2669,-97.7428);
+		            position2 = new google.maps.LatLng(30.290614,-97.719793);
+		            position3 = new google.maps.LatLng(30.293682,-97.745388);
+		            position4 = new google.maps.LatLng(30.235006,-97.718868);
+		            position5 = new google.maps.LatLng(30.270345,-97.731468);
+		            position6 = new google.maps.LatLng(30.261940,-97.726817);
+		            position7 = new google.maps.LatLng(30.314099,-97.741984);
+		            position8 = new google.maps.LatLng(30.251606,-97.766487);
+		            position9 = new google.maps.LatLng(30.275621,-97.765106);
+
+		            var marker = new google.maps.Marker({
+		                position: position1,
+		                map: map,
+		                title: 'Center of Map (Based on the search, will delete node when map is finished)',
+		                icon: icon1
+		            });
+		            var marker = new google.maps.Marker({
+		                position: position2,
+		                map: map,
+		                title: '3309 HollyWood Ave, Austin, TX',
+		                icon: icon2
+		            });
+		            var marker = new google.maps.Marker({
+		                position: position3,
+		                map: map,
+		                title: '2800 Salado, Austin, TX',
+		                icon: icon3
+		            });
+		            var marker = new google.maps.Marker({
+		                position: position4,
+		                map: map,
+		                title: '1515 Wickersham Lane, Austin, TX 78741',
+		                icon: icon4
+		            });
+		            var marker = new google.maps.Marker({
+		                position: position5,
+		                map: map,
+		                title: '900 E 11th St. Austin, TX 78702',
+		                icon: icon5
+		            });
+		            var marker = new google.maps.Marker({
+		                position: position6,
+		                map: map,
+		                title: '1601 E 5th St Austin, TX 78702',
+		                icon: icon6
+		            });
+		            var marker = new google.maps.Marker({
+		                position: position7,
+		                map: map,
+		                title: '4406 Medical Pkwy Austin, TX 78756',
+		                icon: icon7
+		            });
+		            var marker = new google.maps.Marker({
+		                position: position8,
+		                map: map,
+		                title: '1700 S Lamar Blvd Austin, TX 78704',
+		                icon: icon8
+		            });
+		            var marker = new google.maps.Marker({
+		                position: position8,
+		                map: map,
+		                title: '1717 W 6th St Austin, TX 78703',
+		                icon: icon9
+		            });
+
+		          }
+		          google.maps.event.addDomListener(window, 'load', initialize);
+		        </script>
+		        <div class="sideBarContainer">
+    				<div class="sideMenuTitleBar">Map View</div>
+              		<div id="serpMap" style="width:350px; height:300px;"></div>
+          		</div> 
+          		<div class="sideBarContainer" >
+           			<div class="sideMenuTitleBar">Realtors</div>
+	                <div id="localAd">
+	                    <h3>Local Ad</h3>
+	                </div>
+              		<div id="realAd"  >
+	                    <h3>Paid Ads</h3>
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                   text text text text text text text text text
+	                </div>
+	            </div>    
+          		<div class="sideBarContainer">
+            		<div class="sideMenuTitleBar">Past Searches</div>
+            		<br /><br /><br /> 
+          		</div>            
+			</div><!-- closes the right rail-->
+            <br style="clear:both;"/>
+        </form>
+	</div><!-- closes the Content -->  
+	<div id="filler"></div>
+</div>
+    <!-- dynamic footer for when the page expands because of content -->
+ 	<footer id="footer">
+		<div>
+	      	<a href="../Registration/">register  </a> |
+	        <a href="../About/">about  </a> |
+	        <a href="../Terms/">terms  </a> |
+	        <a href="../Privacy/">privacy  </a> |
+	        <a href="../Contact/"> contact us</a> 
+    	</div>
+	</footer> 	 
+</body>
+</html>

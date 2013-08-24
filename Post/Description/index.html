@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="../../css/mstyle.css" />
+<link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
+<link rel="stylesheet" href="../../css/jquery-ui-1.10.3.custom.css" />
+<title>Lessor</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../../js/javaScript.js"></script>
+</head>
+<body>
+<div class="wrapper1">
+     <!-- background dim -->
+    <div id="dim" style="display:none;"> </div>  
+      <!-- login box -->
+      <div id="loginBox" style="display: none">
+        <div id="between">
+          <input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
+          <input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
+          <div id="logs">
+            <input id="remember" type="checkbox" name="remember" />Remember Me
+            <a href="" id="signIn"><div id="sign-in">Sign In</div></a>
+          </div>
+        </div>
+        <div class="signUp"> <a href="../../Registration/">Sign up now!</a> </div>
+      </div>
+     <header>
+        <div id="topBar2">
+            <div id="cornerImg"><a href="../../"><img src="../../img/keyLogo.png" class="mini"/></a></div>
+
+            <div class="searchTop"> 
+            <a href="#" id="loginTrigger">
+                <input type="button" name="signIn" value="Sign In" id="si"/></a>
+            <a href="../../Post/">
+                <input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+            
+            <!-- Location and Date Search Box-->
+               
+               <div class="headerMiddle">
+                <input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
+                <a href="../../Results/">
+                    <div id="resultButton"><img src="../../img/searchicon.png" id="searchicon"/>Search</div></a>  
+                   </div>  
+        </div>
+        </div>
+        </header>
+			
+      <div class="Content"> 
+			<div id="middleContainer">
+				<form>
+				<div class="lessor-listbox">
+
+				
+					<div class="postBox">
+
+						<div class="post-nav">
+								<ul id="post-boxTab">
+									<li><a href="../" id="pl1">General</a></li>
+									<li><a href="" id="pl2" style="border-radius: 2px 0px 0px 2px;color:rgb(161,161,161);background-color: white;">Description</a></li>
+									<li><a href="../Drag/" id="pl3">Photos</a></li>
+									<li><a href="../Confirm/" id="pl4">Comfirm</a></li>
+								</ul>
+						</div>
+
+            <div id="filler" style="height:60px;"></div>
+
+						<!-- Amenities -->
+						<div id="interior">
+							<div class="amenInfo">
+								<ul>
+
+                  <li>Property Name<br />
+                  <input type="text" name="propertyName" id="propertyName" style="width:100%; margin-bottom:10px;"maxlength="60" placeholder="">
+                  <br />
+                  General Description<br />
+                    <textarea name="generalDescription" id="generalDescription" style="width:99.5%;" placeholder=""></textarea>
+                    </li>
+
+
+									<li>
+                  <div id="csz" >
+                    <div class="calendarDiv">
+                      Start Date<label id="dot">&nbsp;*</label><br />
+                      <!--<input id="datepicker" type="textbox" name="startdatebox" placeholder="" />-->
+                      <img src="../../img/Calendar.png" style="width:215px;" />
+                    </div>
+                    <div class="calendarDiv">
+                       &nbsp;End Date<label id="dot">&nbsp;*</label><br />
+    							     <!--<input id="datepicker"type="textbox" name="startdatebox" placeholder="End Date" />-->
+                      <img src="../../img/Calendar.png" style="width:215px;" id="calendarPic" />
+                    </div>
+                  </div>
+                  </li>
+					<li>
+                  <br />
+                  <br />
+                  <input type="checkbox" name="furn" value="1" />Furnished</li>
+                       				<li><input type="checkbox" name="park" value="1" />Parking spot</li>
+                        			<li><input type="checkbox" name="wash" value="1" />Washer/Dryer</li>
+                        			<li><input type="checkbox" name="ac" value="1" />Central A/C</li>
+                        			<li><input type="checkbox" name="dish" value="1" />Dishwasher</li>
+                        			<li><input type="checkbox" name="pool" value="1" />Pool</li>
+                        			<li><input type="checkbox" name="pet" value="1" />Pet friendly</li>
+                        			<li><input type="checkbox" name="gym" value="1" />Gym</li>
+                        			<li><input type="checkbox" name="balcony" value="1" />Balcony</li>
+                    			</ul>
+                    		</div>
+                        <br />
+                        <br />
+							<a href="../" id="prevBut"><div id="wut">Previous</div></a>
+							<a href="../Drag/" id="nextBut2"><div id="wut">Next</div></a>
+							<br style="clear:both;"/>
+						</div>
+
+						
+
+			</div><!-- closes tab content section -->
+		
+		</div><!-- closes the listbox section -->
+	</form>
+		<br style="clear:both;"/>
+	</div><!-- closes the middle container -->
+</div><!-- closes the midContent section -->
+
+</div><!--closes the wrapper class -->
+
+<footer id="footer1">
+  <div class="about3">
+      <a href="../../Registration/" id="foot1">register  </a> |
+        <a href="../../About/" id="foot2">about  </a> |
+        <a href="../../Terms/" id="foot3">terms  </a> |
+        <a href="../../Privacy/" id="foot4">privacy  </a> |
+        <a href="../../Contact/" id="foot5"> contact us</a> 
+    </div>
+</footer> 
+ 
+<!-- dynamic footer for when the page expands because of content -->
+
+</body>
+</html>

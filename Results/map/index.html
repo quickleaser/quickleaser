@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="../../css/mstyle.css" />
+<link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
+<link rel="stylesheet" href="../../css/jquery-ui-1.10.3.custom.css" />
+<title>Search Listings</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../../js/javaScript.js"></script>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+      var map;
+      function initialize() {
+        var mapOptions = {
+        zoom: 13,
+        center: new google.maps.LatLng(30.2669,-97.7428),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+          mapOptions);
+
+        var icon = new google.maps.MarkerImage(
+          "../../img/pindot20.png", //url
+          null,
+          null,
+          new google.maps.Point(0, 0), 
+          new google.maps.Size(25, 33) //size
+        );
+
+        position1 = new google.maps.LatLng(30.2669,-97.7428);
+        position2 = new google.maps.LatLng(30.290614,-97.719793);
+        position3 = new google.maps.LatLng(30.293682,-97.745388);
+        position4 = new google.maps.LatLng(30.235006,-97.718868);
+        position5 = new google.maps.LatLng(30.270345,-97.731468);
+        position6 = new google.maps.LatLng(30.261940,-97.726817);
+        position7 = new google.maps.LatLng(30.314099,-97.741984);
+        position8 = new google.maps.LatLng(30.251606,-97.766487);
+        position9 = new google.maps.LatLng(30.275621,-97.765106);
+
+        var marker = new google.maps.Marker({
+            position: position1,
+            map: map,
+            title: 'Center of Map (Based on the search, will delete node when map is finished)',
+            icon: icon
+        });
+        var marker = new google.maps.Marker({
+            position: position2,
+            map: map,
+            title: '3309 HollyWood Ave, Austin, TX',
+            icon: icon
+        });
+        var marker = new google.maps.Marker({
+            position: position3,
+            map: map,
+            title: '2800 Salado, Austin, TX',
+            icon: icon
+        });
+        var marker = new google.maps.Marker({
+            position: position4,
+            map: map,
+            title: '1515 Wickersham Lane, Austin, TX 78741',
+            icon: icon
+        });
+        var marker = new google.maps.Marker({
+            position: position5,
+            map: map,
+            title: '900 E 11th St. Austin, TX 78702',
+            icon: icon
+        });
+        var marker = new google.maps.Marker({
+            position: position6,
+            map: map,
+            title: '1601 E 5th St Austin, TX 78702',
+            icon: icon
+        });
+        var marker = new google.maps.Marker({
+            position: position7,
+            map: map,
+            title: '4406 Medical Pkwy Austin, TX 78756',
+            icon: icon
+        });
+        var marker = new google.maps.Marker({
+            position: position8,
+            map: map,
+            title: '1700 S Lamar Blvd Austin, TX 78704',
+            icon: icon
+        });
+        var marker = new google.maps.Marker({
+            position: position8,
+            map: map,
+            title: '1717 W 6th St Austin, TX 78703',
+            icon: icon
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<body>
+  <div class="wrapper">
+   <!-- background dim -->
+    <div id="dim" style="display:none;"> </div>  
+      <!-- login box -->
+      <div id="loginBox" style="display: none">
+        <div id="between">
+          <input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
+          <input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
+          <div id="logs">
+            <input id="remember" type="checkbox" name="remember" />Remember Me
+            <a href="" id="signIn"><div id="sign-in">Sign In</div></a>
+          </div>
+        </div>
+        <div class="signUp"> <a href="../../Registration/">Sign up now!</a> </div>
+      </div>
+     <header>
+        <div id="topBar2">
+            <div id="cornerImg"><a href="../../"><img src="../../img/keyLogo.png" class="mini"/></a></div>
+
+            <div class="searchTop"> 
+            <a href="#" id="loginTrigger">
+                <input type="button" name="signIn" value="Sign In" id="si"/></a>
+            <a href="../../Post/">
+                <input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+            
+            <!-- Location and Date Search Box-->
+               
+               <div class="headerMiddle">
+                <input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
+                <a href="../">
+                    <div id="resultButton"><img src="../../img/searchicon.png" id="searchicon"/>Search</div></a>  
+                   </div>  
+            </div>
+        </div>
+        <div class="hiddenTab">
+            <div class="amenContainer">
+                    &nbsp;<b>Price</b> Max:
+                <div class="filter-style2">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">Drop down</option>
+                        <option value="">Text Input</option>
+                        <option value="">or Slider?</option>
+                    </select>  
+                </div>
+
+                    &nbsp;<b>Type</b>:
+                <div class="filter-style5">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">House</option>
+                        <option value="">Apartment/Condo</option>
+                        <option value="">Duplex</option>
+                        <option value="">Dorm</option>
+                        <option value="">Other</option>
+                    </select>  
+                </div>
+                  &nbsp;&nbsp;<b>Bed</b>&nbsp;
+                  Min:
+                <div class="filter-style6">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7+</option>
+                    </select>
+                </div>
+                &nbsp;&nbsp;<b>Bath</b>&nbsp;
+                 Min:
+                <div class="filter-style6">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">1</option>
+                        <option value="">1.5</option>
+                        <option value="">2</option>
+                        <option value="">2.5</option>
+                        <option value="">3</option>
+                        <option value="">3.5</option>
+                        <option value="">4+</option>
+                    </select>
+                </div>
+                <a href="#" id="blessed"><div>Show Menu +</div></a>
+            </div>
+            <br />
+        </div>
+        <div id="underTab" style="margin-top:-33px;">
+        <div class="hiddenAmenMenu">
+            <div style="width:350px; height: 80px; float:right; text-align:right; font-size:13px; line-height:25px;">
+
+            	 <b>Duration:</b>&nbsp;&nbsp;Min: <input type="textbox" name="minmonth" value="" class="sideMonths"/>
+                    &nbsp;&nbsp;Max: <input type="textbox" name="maxmonth" value="" class="sideMonths"/>
+                    <br />
+                 Earliest Move In Date:
+                <div class="filter-style2" style="width:100px;  border:1px solid #ccc; margin-right:60px; margin-top:15px;">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">Date Picker</option>
+                    </select>  
+                </div>
+                <br />
+                Latest Move In Date:
+                <div class="filter-style2" style="width:100px;  border:1px solid #ccc; margin-right:64px;">
+                    <select>
+                        <option value="" style="display:none;"></option>
+                        <option value="">Date Picker</option>
+                    </select>  
+                </div>
+            </div>
+
+            <div class="amenMenu">
+                <div>
+                    <ul class="amenList">
+                        <li>Parking Spot <input type="Radio" name="parking" value="1" /><input type="Radio" name="parking" value="2" /><input type="Radio" name="parking" value="3" /></li>
+                        <li>Dishwasher<input type="Radio" name="diswash" value="1" /><input type="Radio" name="dishwash" value="2" /><input type="Radio" name="dishwash" value="3" /></li>
+                        <li>Furnished<input type="Radio" name="furnish" value="1" /><input type="Radio" name="furnish" value="2" /><input type="Radio" name="furnish" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Washer/Dryer<input type="radio" name="laundry" value="1" /><input type="radio" name="laundry" value="2" /><input type="radio" name="laundry" value="3" /></li>
+                        <li>Pool<input type="Radio" name="pool" value="1" /><input type="Radio" name="pool" value="2" /><input type="Radio" name="pool" value="3" /></li>
+                        <li>Central A/C<input type="Radio" name="ac" value="1" /><input type="Radio" name="ac" value="2" /><input type="Radio" name="ac" value="3" /></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="amenList">
+                        <li>Pet Friendly<input type="Radio" name="pets" value="1" /><input type="Radio" name="pets" value="2" /><input type="Radio" name="pets" value="3" /></li>
+                        <li>Gym<input type="Radio" name="gym" value="1" /><input type="Radio" name="gym" value="2" /><input type="Radio" name="gym" value="3" /></li>
+                        <li>Balcony<input type="Radio" name="balcony" value="1" /><input type="Radio" name="balcony" value="2" /><input type="Radio" name="balcony" value="3" /></li>
+                    </ul>
+                </div>
+                <div id="amenLegend">
+                    <ul class="amenList">
+                        <li>Unimportant<input type="Radio" name="unimportant" value="1" /></li>
+                        <li>Important<input type="Radio" name="important" value="1" /></li>
+                        <li>Deal Breaker<input type="Radio" name="deal" value="1" /></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+        </div>
+        
+    </header>
+    <!-- middle content container -->
+    <div class="Content">
+    	<div style="width:1000px; text-align:left; padding-bottom:5px; margin-right:auto; margin-left:auto;padding-top:5px;">
+    	  Sort By
+    	   <a href="map/"><div id="mapButton" style="background-color: rgb(225,225,225); float:right;">Map</div></a>
+    	   <a href="../"><div id="listButton" style="background-color: #488BFE; float:right; color:white;">List</div></a>
+          
+           </div>
+    	<div class="mapViewCon">
+        	<div id="map-canvas"></div>
+     	</div>
+        <br style="clear:both;"/>
+	</div><!-- closes the listbox -->  
+</div><!-- closes the midContent container -->
+    
+</div><!-- closes the wrapper class-->
+	<!-- dynamic footer for when the page expands because of content -->
+ 	<footer id="footer1">
+		<div class="about3">
+      <a href="../../Registration/" id="foot1">register  </a> |
+        <a href="../../About/" id="foot2">about  </a> |
+        <a href="../../Terms/" id="foot3">terms  </a> |
+        <a href="../../Privacy/" id="foot4">privacy  </a> |
+        <a href="../../Contact/" id="foot5"> contact us</a> 
+    </div>
+	</footer> 
+</body>
+</html>

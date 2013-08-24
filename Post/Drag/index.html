@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="../../css/mstyle.css" />
+<link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
+<link rel="stylesheet" href="../../css/jquery-ui-1.10.3.custom.css" />
+<title>Lessor</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../../js/javaScript.js"></script>
+</head>
+<body>
+<div class="wrapper1">
+    <!-- background dim -->
+    <div id="dim" style="display:none;"> </div>  
+      <!-- login box -->
+      <div id="loginBox" style="display: none">
+        <div id="between">
+          <input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
+          <input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
+          <div id="logs">
+            <input id="remember" type="checkbox" name="remember" />Remember Me
+            <a href="" id="signIn"><div id="sign-in">Sign In</div></a>
+          </div>
+        </div>
+        <div class="signUp"> <a href="../../Registration/">Sign up now!</a> </div>
+      </div>
+     <header>
+        <div id="topBar2">
+            <div id="cornerImg"><a href="../../"><img src="../../img/keyLogo.png" class="mini"/></a></div>
+
+            <div class="searchTop"> 
+            <a href="#" id="loginTrigger">
+                <input type="button" name="signIn" value="Sign In" id="si"/></a>
+            <a href="../../Post/">
+                <input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+            
+            <!-- Location and Date Search Box-->
+               
+               <div class="headerMiddle">
+                <input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
+                <a href="../../Results/">
+                    <div id="resultButton"><img src="../../img/searchicon.png" id="searchicon"/>Search</div></a>  
+                   </div>  
+        </div>
+        </div>
+        </header>
+			
+      <div class="Content"> 
+			<div id="middleContainer">
+
+				<form>
+				<div class="lessor-listbox">
+
+				
+					<div class="postBox">
+
+						<div class="post-nav">
+								<ul id="post-boxTab">
+									<li><a href="../" id="pl1">General</a></li>
+									<li><a href="../Description/" id="pl2">Description</a></li>
+									<li><a href="" id="pl3" style="border-radius: 2px 0px 0px 2px;color:rgb(161,161,161);background-color: white;">Photos</a></li>
+									<li><a href="../Confirm/" id="pl4">Comfirm</a></li>
+								</ul>
+						</div>
+
+						<!-- Photo -->
+						<div id="photo">
+							<h2>Drag and Drop Photos</h2>
+							<br />
+							<br />
+							<a href="../Description/" id="prevBut2"><div id="wut">Previous</div></a>
+							<a href="../Confirm/" id="nextBut3"><div id="wut">Next</div></a>
+							<br style="clear:both;"/>
+						</div>
+
+						
+
+			</div><!-- closes tab content section -->
+		
+		</div><!-- closes the listbox section -->
+	</form>
+		<br style="clear:both;"/>
+	</div><!-- closes the middle container -->
+</div><!-- closes the midContent section -->
+
+</div><!--closes the wrapper class -->
+
+<footer id="footer1">
+  <div class="about3">
+      <a href="../../Registration/" id="foot1">register  </a> |
+        <a href="../../About/" id="foot2">about  </a> |
+        <a href="../../Terms/" id="foot3">terms  </a> |
+        <a href="../../Privacy/" id="foot4">privacy  </a> |
+        <a href="../../Contact/" id="foot5"> contact us</a> 
+    </div>
+</footer> 
+ 
+<!-- dynamic footer for when the page expands because of content -->
+
+</body>
+</html>

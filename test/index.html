@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link type="text/css" rel="stylesheet" href="../css/mstyle.css" />
+  <link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
+  <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.css" />
+  <title>Create a Post On Quickleaser</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="../js/javaScript.js"></script>
+</head>
+<body>
+  <div class="wrapper1">
+  	<header> 
+     <!-- Static header bar for login and post a lease -->
+     <a href="../Lessor/new">
+      <input id="pal" type="button" name="postLease" value="Post a Lease" /></a> 
+      <a href="#" id="loginTrigger">
+        <input type="button" name="signIn" value="Sign In" id="si"/></a>   
+      </header>
+
+      <!-- background dim -->
+      <div id="dim" style="display:none"> </div> 
+
+      <!-- login box -->
+      <div id="loginBox" style="display: none">
+        <div id="between">
+          <input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
+          <input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
+          <div id="logs">
+            <input id="remember" type="checkbox" name="remember" />Remember Me
+            <a href="" id="signIn">
+              <div id="sign-in">Sign In</div>
+            </a>
+          </div>
+        </div>
+        <div class="signUp"> <a href="../Registration/">Sign up now!</a> </div>
+      </div>
+
+
+      <div id="topNewPostSection">
+        
+        <div id="slo">
+          <div id="sideLogo"> <a href="../"><img src="../img/quickleaser_logo.png" /></a> 
+          <h1>Select Your Options</h1></div></div>
+      </div>
+
+      <form>
+        <div id="midNewPostSection">
+
+          <div id="choose">
+
+
+            <div id="leftChoice">
+              <div id="housingType">
+
+
+                <span>Housing Type</span>
+                <ul id="houseButtons">
+                  <a href="#" id="housePic1"><li id="hB">apartment</li></a>
+                  <a href="#" id="housePic2"><li id="hB">house</li></a>
+                  <a href="#" id="housePic3"><li id="hB">condo</li></a>
+                  <a href="#" id="housePic4"><li id="hB">dorm</li></a>
+                </div>
+
+
+                <div id="cityType">
+                  <span>City</span>
+                  <div id="cityButtons">
+                    <input id="cityLocation" name="cityLocation" placeholder="City, State, etc..." type="text" autocomplete="off">
+                  </div>
+                </div>
+
+
+
+                <a href="../"><div id="wut2">Next</div></a>
+
+              </div>
+
+              <div id="hiddenPics">
+                <img id="hP1" src="http://www.contemporist.com/photos/domain_s2.jpg"/>
+                <img id="hP2" src="http://www.digsdigs.com/photos/modular-glossy-black-house-10.jpg"/>
+                <img id="hP3" src="http://cdn-ugc.cafemom.com/gen/resize/312/223/80/2011/02/10/10/8r/2c/pos6qdjo0s1ehm8.jpg"/>
+                <img id="hP4" src="http://veemoze.files.wordpress.com/2010/07/typical_hofstra_dorm_room.jpg"/>
+              </div>
+
+
+            </div><!-- closes choose div -->
+
+          </div>
+
+
+        </form>
+
+        <div id="botNewPostSection">
+
+        </div>
+
+      </div><!--closes the wrapper div -->
+      <!-- static footer-->
+      <footer id="footer1">
+        <div class="about3">
+          <a href="../../Registration/">register  </a> |
+          <a href="../../About/">about  </a> |
+          <a href="../../Terms/">terms  </a> |
+          <a href="../../Privacy/">privacy  </a> |
+          <a href="../../Contact/"> contact us</a> 
+        </div>
+      </footer>
+    </body>
+    </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="../../css/mstyle.css" />
+<link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
+<link rel="stylesheet" href="../../css/jquery-ui-1.10.3.custom.css" />
+<meta charset="UTF-8" />
+<title>Personal Properties</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../../js/javaScript.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <!-- background dim -->
+		<div id="dim" style="display:none;"> </div>  
+			<!-- login box -->
+			<div id="loginBox" style="display: none">
+				<div id="between">
+					<input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
+					<input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
+					<div id="logs">
+						<input id="remember" type="checkbox" name="remember" />Remember Me
+						<a href="" id="signIn"><div id="sign-in">Sign In</div></a>
+					</div>
+				</div>
+				<div class="signUp"> <a href="../../Registration/">Sign up now!</a> </div>
+			</div>
+		<header>
+			<div id="topBar2">
+				<div id="cornerImg"><a href="../../"><img src="../../img/keyLogo.png" class="mini"/></a></div>
+				<div class="searchTop"> 
+					<a href="#" id="loginTrigger"><input type="button" name="signIn" value="Sign In" id="si"/></a>
+					<a href="../../Post/"><input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+					<div class="headerMiddle">
+						<input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
+						<a href="../../Results/"><div id="resultButton"><img src="../../img/searchicon.png" id="searchicon"/>Search</div></a>  
+					</div>  
+				</div>
+			</div>
+		</header>
+    	<div class="midSection">
+    		<h1>Properties</h1>
+    	</div><!--closes the middle content div-->
+	</div><!--closes the wrapper class -->
+<!-- static footer-->
+<footer id="footer1">
+	<div class="about3">
+    	<a href="../../Registration/" id="foot1">register  </a> |
+        <a href="../../About/" id="foot2">about  </a> |
+        <a href="../../Terms/" id="foot3">terms  </a> |
+        <a href="../../Privacy/" id="foot4">privacy  </a> |
+        <a href="../../Contact/" id="foot5"> contact us</a> 
+    </div>
+</footer>
+</body>
+</html>

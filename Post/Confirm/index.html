@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="../../css/mstyle.css" />
+<link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
+<link rel="stylesheet" href="../../css/jquery-ui-1.10.3.custom.css" />
+<title>Lessor</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../../js/javaScript.js"></script>
+</head>
+<body>
+<div class="wrapper1">
+     <!-- background dim -->
+    <div id="dim" style="display:none;"> </div>  
+      <!-- login box -->
+      <div id="loginBox" style="display: none">
+        <div id="between">
+          <input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
+          <input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
+          <div id="logs">
+            <input id="remember" type="checkbox" name="remember" />Remember Me
+            <a href="" id="signIn"><div id="sign-in">Sign In</div></a>
+          </div>
+        </div>
+        <div class="signUp"> <a href="../../Registration/">Sign up now!</a> </div>
+      </div>
+     <header>
+        <div id="topBar2">
+            <div id="cornerImg"><a href="../../"><img src="../../img/keyLogo.png" class="mini"/></a></div>
+
+            <div class="searchTop"> 
+            <a href="#" id="loginTrigger">
+                <input type="button" name="signIn" value="Sign In" id="si"/></a>
+            <a href="../../Post/">
+                <input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+            
+            <!-- Location and Date Search Box-->
+               
+               <div class="headerMiddle">
+                <input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
+                <a href="../../Results/">
+                    <div id="resultButton"><img src="../../img/searchicon.png" id="searchicon"/>Search</div></a>  
+                   </div>  
+        </div>
+        </div>
+        </header>
+			
+      <div class="Content"> 
+			<div id="middleContainer">
+
+				<form>
+				<div class="lessor-listbox">
+
+				
+					<div class="postBox">
+
+						<div class="post-nav">
+								<ul id="post-boxTab">
+									<li><a href="../" id="pl1">General</a></li>
+									<li><a href="../Description/" id="pl2">Description</a></li>
+									<li><a href="../Drag/" id="pl3">Photos</a></li>
+									<li><a href="" id="pl4" style="border-radius: 2px 0px 0px 2px;color:rgb(161,161,161);background-color: white;">Comfirm</a></li>
+								</ul>
+						</div>
+
+						
+
+						<!-- Comfirm -->
+						<div id="comfirm">
+							
+
+							<!-- Test listings, it's contained in a div (postings)-->
+        		<div class="postings" style="float:none;">
+
+                <div id="picContainer">
+                  <a href="" id="testCap">
+       	  			    <img id="listingPicture2" src="../../img/dog.jpg" />
+                    <span>5 More Photos</span>
+                  </a>
+                </div>
+                
+       	  			<a href="../../Listing/">
+          				<h2> Macaroni's Penthouse </h2>
+          			</a>
+          			<br />
+            		<span>$455 per Month </span>
+           			<div id="lower">  
+            			<h3> Jan. 1, 2014 to Dec. 30, 2014 </h3>
+                  <div> 
+                    <br />
+                    <br />
+                    <a href="#" id="subMenuTrigger">
+            			    <input type="image" src="../img/arrow2.png"  alt="#" class="moreInfo" /> Show More</a>
+                    <a href="#" id="lessTrigger" style="display:none;">
+            			    <input type="image" src="../img/arrowUp.png"  alt="#" class="moreInfo" /> Show Less</a>
+                  </div>
+            		</div>
+                    <br style="clear:both;"/>
+      			</div>
+
+         
+                
+                <div id="miniMore" style="display: none;">
+
+
+
+                      <div id="pictureSide">
+                          <img class="sidePic" src="http://t0.gstatic.com/images?q=tbn:ANd9GcTJPSa8hJQ2NYG_wegOspe4YT2v8sVB2InMknNDB3jajzE8ngEe" />          
+                          <img class="sidePic" src="http://t2.gstatic.com/images?q=tbn:ANd9GcR6zBi9ipxnGtGrpaIQpOq8WrEs2WiGI24NDMEEAo4Ftg8E71rwcg" />
+                          <img class="sidePic" src="http://t0.gstatic.com/images?q=tbn:ANd9GcQSsSQIYaNYc-2xODb9Eaxjs5KAKhjPDZrIf8WMMQGNszaFAiDa5Q" />
+                          <img class="sidePic" src="http://t2.gstatic.com/images?q=tbn:ANd9GcR6zBi9ipxnGtGrpaIQpOq8WrEs2WiGI24NDMEEAo4Ftg8E71rwcg" />
+                          <img class="sidePic" src="http://t0.gstatic.com/images?q=tbn:ANd9GcQSsSQIYaNYc-2xODb9Eaxjs5KAKhjPDZrIf8WMMQGNszaFAiDa5Q" />
+
+                      </div>
+
+
+                                <table class="details">
+                                	<tr >
+                                   		<td class="label">2 bed 1.5 bath Duplex:  1200 ft <sup>2</sup></td>
+                                      
+                                  </tr>
+                                    <tr>
+                                        <td class="labeltext">We have negotiated a limited number of apartments for spring-only leases, January - July. This is an exceptional opportunity because nearly all other apartments in West Campus are rented on a year-long basis. This lease is located at Quarter's Cameron House which is located in West Campus (where the majority of UT students live), and ... <a style="color:blue;, font-weight:600;" href="">read more</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                
+                                <!--<table class="tHeader">
+                                	<tr>
+                                		<th>Amenities</th>
+                                    </tr>
+                                </table>-->
+                                
+                                <table class="amenTable">
+                                    <tr>
+                                    	<td class="amenCol">
+                                        	<li>Furnished</li>
+                                        </td>
+                                        
+                                        <td class="amenCol">
+                                        	<li>Parking Spot</li>
+                                        </td>
+
+                                    	 <td class="amenCol">
+                                        	<li>Washer/Dryer</li>
+                                        </td>
+
+                                        <td class="amenCol">
+                                        	<li> A/C</li>
+                                        </td>
+                                    	<td class="amenCol">
+                                        	<li>Dishwasher</li>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="amenCol">
+                                        	<li>Pool</li>
+                                        </td>
+
+                                    	<td class="amenCol">
+                                        	<li>Pet friendly</li>
+                                        </td>
+                                        <td class="amenCol">
+                                        	<li>Gym</li>
+                                        </td>
+
+                                    	<td class="amenCol">
+                                        	
+                                        </td>
+                                        <td class="amenCol">
+                                        	
+                                        </td>
+                                    </tr>
+                                </table>
+              </div>
+              				
+              				<a href="#" id="previewBut"><div class="basicButton">Preview</div></a>
+
+
+							<br />
+							<!--<a href="../Drag/" id="prevBut3"><div class="basicButton">Previous</div></a>-->
+							<a href="#" id="finishBut"><div class="basicButton">Finish</div></a>
+							<br />
+							<br />
+
+						</div>
+
+			</div><!-- closes tab content section -->
+		
+		</div><!-- closes the listbox section -->
+	</form>
+		<br style="clear:both;"/>
+	</div><!-- closes the middle container -->
+</div><!-- closes the midContent section -->
+
+</div><!--closes the wrapper class -->
+
+<footer id="footer1">
+  <div class="about3">
+      <a href="../../Registration/" id="foot1">register  </a> |
+        <a href="../../About/" id="foot2">about  </a> |
+        <a href="../../Terms/" id="foot3">terms  </a> |
+        <a href="../../Privacy/" id="foot4">privacy  </a> |
+        <a href="../../Contact/" id="foot5"> contact us</a> 
+    </div>
+</footer> 
+ 
+<!-- dynamic footer for when the page expands because of content -->
+
+</body>
+</html>
