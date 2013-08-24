@@ -6,6 +6,7 @@ html, body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
   	Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
 #homepage {
 	background-image: url(../img/bgcity4.jpg);
 	background-color:white;
@@ -2397,6 +2398,7 @@ a {
 	display:inline-block;
 	height:900px;
 	text-align:left;
+	padding-right:10px;
 }
 
 #property #left #generalInfo h3{
@@ -2440,8 +2442,7 @@ a {
 }
 
 #property #right #desc{
-	border-bottom:2px solid #ccc;
-	padding:5px;
+margin-top:10px;
 }
 #property #right #reviews{
 	background-color:white;
@@ -2454,7 +2455,6 @@ a {
 		margin:auto;
 
 	margin-top:10px;
-	border-bottom:1px solid #ccc;
 }
 
 #property #right #reviews p{
@@ -2470,10 +2470,13 @@ a {
 }
 
 #property #right #pricing h3, #property #right #desc h3, #property #right #reviews h3{
+
 }
 
 #property #right #pricing p, #property #right #desc p{
 	text-align:left;
+	padding-left:0;
+	
 }
 
 #property #right #pricing #wrap{
@@ -2509,10 +2512,9 @@ a {
 
 #property #left #generalInfo {
 	width:100%;
-	height:240px;
 	background-color:white;
 	margin-top:0px;
-	border-bottom:1px solid #ccc;
+	margin-bottom:10px;
 	
 }
 
@@ -2542,7 +2544,7 @@ a {
 
 #property #right{
 	width:100%;
-	max-width:650px;
+	width:650px;
 	display:inline-block;
 	background-color:white;
 	
@@ -2554,8 +2556,17 @@ a {
 
 #property #right #dormTour{
 	background-color:white;
-	border-bottom:2px solid #ccc;
-	padding:5px;
+	position:relative;
+	
+}
+#property #right #dormTour #bigPic{
+display:inline-block;
+margin:0;
+
+}
+#property #bigPic img{
+width:400px;
+height:251px;
 }
 
 #property #right #dormTour #video{
@@ -2582,17 +2593,21 @@ a {
 
 #property #right #dormTour ul{
 	margin:0;
+	
 	padding:0;
+
 }
+#property #right #dormTour #picWrap{
+
+	position:absolute;
+	right:0;
+top:0;
+	}
+
 #property #right #dormTour #pics img{
-	width:81px;
+	width:113px;
+	height:81px;
 	border-radius:2px;	
-}
-#property #right #pricing{
-	background-color:white;
-	margin-left:20px;
-	border-bottom:2px solid #ccc;
-	max-height:260px;
 }
 
 #generalInfo .review
@@ -2628,16 +2643,57 @@ a {
 	color: rgb(220, 134, 39);
 }
 #left #availability, #left #availSent{
-	height:300px;
-	width:100%;
+	padding-bottom:40px;
+	padding-top:5px;
 	border:none;
-	border-bottom:2px solid #ccc;
 	text-align:left;
+	border:1px solid #ccc;
 	background-color:white;
 	padding-left:0px;
-	padding-top:10px;
+	padding-left:10px;
+	position:relative;
 
 }
+#left #availability p{
+margin-bottom:0;
+margin-top:5px;
+}
+#left #availability input{
+margin-left:0;
+padding:0;
+
+
+}
+#left #availability .name{
+width:46.2%;
+margin:0;
+padding:0;
+
+}
+#left #availability .email{
+width:95%;
+margin-left:5px;
+margin:0;
+padding:0;
+}
+#left #availability .area{
+width:30px;
+}
+#left #availability .therest{
+width:40px;
+}
+#left #availability .questions{
+resize:none;
+width:95%;
+margin:0;
+height:75px;
+}
+#left #availability button{
+position:absolute;
+right:11px;
+}
+
+
 #left #information{
 	width:100%;
 	height:600px;
@@ -2703,4 +2759,39 @@ input[type="radio"]:checked + label span {
 }
 input[type="radio"]:checked + label:last-of-type span {
     background-color:rgb(32,35,84);
+}
+
+button{
+	color:white;
+	margin:0;
+	border-radius:2px;
+	border:none;
+	color: white;
+	border-radius: 2px;
+	font-weight: bold;
+	font-size: 15px;
+	padding-right:7px;
+	padding-left: 7px;
+	padding-top:4px;
+	padding-bottom: 4px; 
+	display: inline-block;
+	text-align: center;
+	cursor:pointer;
+}
+button.blue:hover	{
+	background: #00b7ea; /* Old browsers */
+background: -moz-linear-gradient(top, #00b7ea 0%, #488bfe 92%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(92%,#488bfe)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #00b7ea 0%,#488bfe 92%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #00b7ea 0%,#488bfe 92%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #00b7ea 0%,#488bfe 92%); /* IE10+ */
+background: linear-gradient(to bottom, #00b7ea 0%,#488bfe 92%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#488bfe',GradientType=0 ); /* IE6-9 */
+}
+button.blue{
+	background-color:#488BFE;
+
+}
+button.pink{
+background-color:pink;
 }
