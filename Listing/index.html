@@ -219,7 +219,7 @@
 							<p style="margin:0">Fire, Dinosaurs, Boats, Ball and Chains, Hidden Bonus Stage, Doors, Windows
                             
 							<p style="margin-bottom:1px"><b>2 People</b> interested in Roommates at this location</p>
-							<button class="blue" >Find a Roommate</button>
+							<button class="blue" style="margin-bottom:5px">Find a Roommate</button>
 							
 							
 							
@@ -240,7 +240,7 @@
 							
 
 							
-                            <br /><div onClick="availabilitySent();" style="cursor:pointer"><button style="margin-top:5px" class="blue">Check Availability</button></div>
+                            <br /><div onClick="availSent();" style="cursor:pointer"><button style="margin-top:5px" class="blue">Check Availability</button></div>
                         </div>
                         <div id="availSent" style="display:none;">
                             <p>Your availability check request has been successfully submitted!</p>
@@ -269,8 +269,8 @@
                              </div>
                         </div>
                         <div id="desc">
-                            <h3>Description</h3>
-                                <p>
+                            <b>Description:</b>
+                                <p style="margin-top:5px">
                                     Ludwig's Castle is the final level in the Twin Bridges area of Super Mario World. It can be 
 									accessed by completing Cookie Mountain or Butter Bridge 2. By completing this level, the player 
 									gains access to Forest of Illusion 1. It consists of a maze-like narrow corridor, a large room 
@@ -302,3 +302,9 @@
 </div><!--closes the wrapper class -->
 </body>
 </html>
+<script>
+function availSent(){
+	document.getElementById("availability").style.display='none';
+	document.getElementById("availSent").style.display='block';
+}
+</script>
