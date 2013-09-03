@@ -1071,6 +1071,12 @@ div.ui-datepicker {
 	background: linear-gradient(to bottom,  rgba(135,224,253,1) 0%,rgba(5,171,224,1) 0%,rgba(83,203,241,1) 53%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#53cbf1',GradientType=0 ); /* IE6-9 */
 }
+
+#general #postNext{
+position:absolute;
+right:0;
+}
+
 #prevBut {
 	float: left;
 	text-decoration: none;
@@ -1729,7 +1735,7 @@ sup {
 
 .lessor-listbox {
 	background-color: #FFF;
-	width: 440px;
+	width: 545px;
 	min-height: 0px;
 	font-size: 13px;
 	font-weight: bold;
@@ -1749,7 +1755,7 @@ sup {
 	text-align: left;
 }
 .lessor-nav li {
-	margin-left: -30px;
+	margin-left: 0;
 }
 .lessor-nav li a {
 	display: block;
@@ -1784,6 +1790,16 @@ sup {
 	font-size: 15px;
 	padding: 0px;
 	margin: 0px;
+}
+#pl21{
+background:none;
+	background-color: #488BFE;
+	color: white;
+}
+#pl21:hover{
+background-color:white;
+	color:rgb(161,161,161);
+
 }
 #pl1 {
 	background:none;
@@ -1833,7 +1849,7 @@ sup {
 }
 
 .post-nav {
-	height: 50px;
+	height: 10px;
 	padding: 0;
 	margin: 0;
 	border: none;
@@ -1871,9 +1887,10 @@ sup {
 
 }
 #general	{
-	width: 433px;
+	width: 100%;
 	text-align: left;
 	line-height: 20px;
+	position:relative;
 }
 .maxLen {
 	width: 429px;
@@ -1933,8 +1950,13 @@ sup {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	position:relative;
+	margin-top:-10px;
 }
 
+.generalInfo ul li{
+margin-bottom:10px
+}
 #genLeft	{
 	margin-right: auto;
 	margin-left:auto;
@@ -2226,9 +2248,7 @@ a {
 	background-color: #488BFE;
 	color: #488BFE;
 }
-#csz {
-	width: 100%;
-}
+
 #stateDiv {
 	width: 140px;
 	float: left;
@@ -2254,11 +2274,11 @@ a {
 
 }
 .houseIcon {
-	width: 105px;
+	width: 115px;
+	cursor:pointer;
+	margin-right:23px;
 }
-.houseIcon:hover {
-	background-image: url(../img/House.png);
-}
+
 #housingCon {
 	width: 100%;
 }
@@ -2266,12 +2286,12 @@ a {
 	float: left;
 }
 .bath {
-	width: 149px;
+	width: 50px;
 	float: left;
 	margin-left: 20px;
 }
 .bed {
-	width: 140px;
+	width: 55px;
 	float: left;
 }
 #numBedrooms {
