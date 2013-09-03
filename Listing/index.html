@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <link type="text/css" rel="stylesheet" href="../css/mstyle.css" />
+
 <link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
 <link rel="stylesheet" href="../css/jquery-ui-1.10.3.custom.css" />
 <title>Spring Semester West Campus Lease</title>
@@ -9,6 +10,7 @@
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="../js/javaScript.js"></script>
+<script src="../js/swipe-vertical.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -250,24 +252,67 @@
                     </div>
                     <div id="right">
                         <div id="dormTour">
-						<div id="bigPic"><img src="../img/castle.jpg"></div>
+						<div id="bigPic"><img src="../img/castle.jpg" id="bigPix"></div>
+						<div class="swiper-container">
+						<div class="swiper-wrapper">
 						<div id="picWrap">
-                            <div id="pics">
+						
+						<img src="../img/downslide.png" onclick="mySwipe.next()" style="position:absolute; bottom:0; width:100%; cursor:pointer; height:20px; background-color:rgba(255,255,255,.5); z-index:1000; margin:auto;" />
+						
+						
+							<div id='mySwipe'  class='swipe'>
+  <div class='swipe-wrap'>
+  <div>
+							                            <div id="pics">
+
                                 <ul>
-                                    <li><img src="../img/castleint1.png" /></li>
-                                    <li><img src="../img/castleint2.png" /></li>
-                                    <li><img src="../img/castleint3.jpg" /></li>
+                                    <li><img src="../img/castle.jpg" onclick="changeBig(this)"/></li>
+                                    <li><img src="../img/castleint2.png" onclick="changeBig(this)"/></li>
+                                    <li><img src="../img/castleint3.jpg" onclick="changeBig(this)" /></li>
                                 </ul>
                             </div>
+							
                             <div id="pics">
                                 <ul>
-                                    <li><img src="../img/castleint4.png" /></li>
-                                    <li><img src="../img/castleint5.jpg" /></li>
-                                    <li><img src="../img/castleint6.png" /></li>
+                                    <li><img src="../img/castleint4.png" onclick="changeBig(this)" /></li>
+                                    <li><img src="../img/castleint5.jpg" onclick="changeBig(this)" /></li>
+                                    <li><img src="../img/castleint6.png" onclick="changeBig(this)" /></li>
+                                </ul>
+								
+								
+								</div></div>
+								 <div>
+							                            <div id="pics">
+
+                                <ul>
+                                    <li><img src="../img/castleint1.png" onclick="changeBig(this)" /></li>
+                                    <li><img src="../img/castleint2.png" onclick="changeBig(this)" /></li>
+                                    <li><img src="../img/castleint3.jpg" onclick="changeBig(this)" /></li>
                                 </ul>
                             </div>
+							
+                            <div id="pics">
+                                <ul>
+                                    <li><img src="../img/castleint4.png" onclick="changeBig(this)" /></li>
+                                    <li><img src="../img/castleint5.jpg" onclick="changeBig(this)" /></li>
+                                    <li><img src="../img/castleint6.png" onclick="changeBig(this)" /></li>
+                                </ul>
+								
+								
+								</div></div>
+								
+								</div>
+                            </div>
+							</div>
+							
+							
+							
+							
+							
+							
                              </div>
                         </div>
+						</div>
                         <div id="desc">
                             <b>Description:</b>
                                 <p style="margin-top:5px">
@@ -303,8 +348,23 @@
 </body>
 </html>
 <script>
+function changeBig(x){
+document.getElementById("bigPix").src=x.src;
+}
+
 function availSent(){
 	document.getElementById("availability").style.display='none';
 	document.getElementById("availSent").style.display='block';
 }
+
+var elem = document.getElementById('mySwipe');
+window.mySwipe = Swipe(elem, {
+   startSlide: 0,
+   auto: 30000000,
+  // continuous: true,
+  // disableScroll: true,
+  // stopPropagation: true,
+  // callback: function(index, element) {},
+  // transitionEnd: function(index, element) {}
+});
 </script>
