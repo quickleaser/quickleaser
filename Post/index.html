@@ -39,16 +39,19 @@
             <a href="#" id="loginTrigger">
                 <input type="button" name="signIn" value="Sign In" id="si"/></a>
             <a href="../Post/">
-                <input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+              <button class="pink" style="float:right; margin-right:5px">Post a Property</button></a>
             
             <!-- Location and Date Search Box-->
                
                <div class="headerMiddle">
                 <input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
                 <a href="../Results/">
-                    <div id="resultButton"><img src="../img/searchicon.png" id="searchicon"/>Search</div></a>  
+                    <button class="blue"><img src="../img/searchicon.png" id="searchicon"/>Search</div></a>  
                    </div>  
-        </div>
+		
+		
+		
+		
         </div>
         </header>
 			
@@ -86,12 +89,15 @@
 
                   <div id="typeDiv">
                     Property<label id="dot">&nbsp;*</label>
-                      <div id="housingCon">
-                        <img src="../img/HouseGrey.png" class="houseIcon" id="house" onclick=selectProp(this.id);>
-                        <img src="../img/ApartmentGrey.png" class="houseIcon" id="apartment" onclick=selectProp(this.id);>
-                        <img src="../img/DuplexGrey.png" class="houseIcon" id="duplex" onclick=selectProp(this.id);>
-                        <img src="../img/DormGrey.png" class="houseIcon" id="dorm" onclick=selectProp(this.id); style="margin-right:0">
-                      </div>
+                      <div class="housingCon">
+                     <div class="rapper">   <img src="../img/HouseGrey.png" class="houseIcon" id="house" onclick=selectProp(this.id);>
+					 <br><span id="houseText">House</span></div>
+                      <div class="rapper">  <img src="../img/ApartmentGrey.png" class="houseIcon" id="apartment" onclick=selectProp(this.id);>
+                      <br><span id="apartmentText">Apartment/Condo</span></div>
+					 <div class="rapper"> <img src="../img/DuplexGrey.png" class="houseIcon" id="duplex" onclick=selectProp(this.id);>
+                      <br><span id="duplexText">Duplex</span></div>
+					  <div class="rapper" style="margin-right:0"><img src="../img/DormGrey.png" class="houseIcon" id="dorm" onclick=selectProp(this.id); style="margin-right:0">
+                     <br><span id="dormText">Dorm</span></div> </div>
                   </div>
                   </li>
 
@@ -154,10 +160,12 @@
 
                   <div id="typeDiv">
                     You are the<label id="dot">&nbsp;*</label>
-                      <div id="housingCon">
-                        <img src="../img/HouseGrey.png" class="houseIcon" id="house" onclick=selectYou(this.id);>
-                                            <img src="../img/HouseGrey.png" class="houseIcon" id="house" onclick=selectYou(this.id);>
-
+                      <div class="housingCon">
+					        <div class="rapper" onclick='selectType("owner");'>  <img src="../img/OwnerGrey.png" class="houseIcon" id="owner">
+<br><span id="ownerText">Owner/Manager</span></div>
+                     <div class="rapper" onclick='selectType("sublease");'>   <img src="../img/SubleaseGrey.png" class="houseIcon" id="sublease">
+					 <br><span id="subText">Subleasee</span></div>
+                                    
                       </div>
                   </div>
                   </li>
@@ -189,7 +197,7 @@
 
 </div><!--closes the wrapper class -->
 
-<footer id="footer1">
+<footer id="footer">
   <div class="about3">
       <a href="../Registration/" id="foot1">register  </a> |
         <a href="../About/" id="foot2">about  </a> |
@@ -210,18 +218,57 @@ function selectProp(x){
 	document.getElementById('duplex').src='../img/DuplexGrey.png';
 	document.getElementById('apartment').src='../img/ApartmentGrey.png';
 	document.getElementById('dorm').src='../img/DormGrey.png';
-
-if(x=='house')	document.getElementById('house').src='../img/House.png';
-
-else if(x=='duplex') 	document.getElementById('duplex').src='../img/Duplex.png';
-else if(x=='apartment') 	document.getElementById('apartment').src='../img/Apartment.png';
-else if(x=='dorm') 	document.getElementById('dorm').src='../img/Dorm.png';
+	document.getElementById('houseText').style.color='rgb(220,220,220)';
+	document.getElementById('apartmentText').style.color='rgb(220,220,220)';
+	document.getElementById('duplexText').style.color='rgb(220,220,220)';
+	document.getElementById('dormText').style.color='rgb(220,220,220)';
 
 
 
+if(x=='house')	{
+document.getElementById('house').src='../img/House.png';
+document.getElementById('houseText').style.color='rgb(237,22,83)';
+}
+else if(x=='duplex') 	{
+document.getElementById('duplex').src='../img/Duplex.png';
+document.getElementById('duplexText').style.color='rgb(237,22,83)';
+
+}
+else if(x=='apartment') 	{
+document.getElementById('apartmentText').style.color='rgb(237,22,83)';
+
+document.getElementById('apartment').src='../img/Apartment.png';
+}
+else if(x=='dorm') {
+	document.getElementById('dorm').src='../img/Dorm.png';
+document.getElementById('dormText').style.color='rgb(237,22,83)';
 
 }
 
 
+}
+
+function selectType(x){
+	document.getElementById('sublease').src='../img/SubleaseGrey.png';
+	document.getElementById('owner').src='../img/OwnerGrey.png';
+
+	document.getElementById('subText').style.color='rgb(220,220,220)';
+	document.getElementById('ownerText').style.color='rgb(220,220,220)';
+
+
+
+
+if(x=='sublease')	{
+document.getElementById('sublease').src='../img/Sublease.png';
+document.getElementById('subText').style.color='rgb(237,22,83)';
+}
+else if(x=='owner') 	{
+document.getElementById('owner').src='../img/Owner.png';
+document.getElementById('ownerText').style.color='rgb(237,22,83)';
+
+}
+
+
+}
 
 </script>

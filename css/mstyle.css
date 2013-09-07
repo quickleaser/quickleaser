@@ -66,6 +66,7 @@ header {
 	top:0;
 	text-align:center;
 	padding:3px 0;
+	border-bottom:2px solid rgb(220,220,220);
 }
 #homePal {
 	border: 0px;
@@ -668,10 +669,13 @@ html {
 	-webkit-appearance: none;
 }
 .filter-style4 {
+	width:60px;
 	display: inline-block;
-	background: url(../img/testB.png) no-repeat right #FFF;
+	background: url(../img/testB.png) no-repeat ;
+	background-position:90% 1px;
 	overflow: hidden;
 	border: 1px solid rgb(161,161,161);
+background-size:34%;	
 }
 .filter-style4 select {
 	background: transparent;
@@ -684,6 +688,7 @@ html {
 	border-radius: 0;
 	text-align: center;
 	-webkit-appearance: none;
+	cursor:pointer;
 }
 .filter-style5 {
 	display: inline-block;
@@ -2292,15 +2297,24 @@ a {
 	float: right;
 
 }
-.houseIcon {
-	width: 115px;
+.housingCon .houseIcon {
+	height:83px;
 	cursor:pointer;
-	margin-right:23px;
 }
 
-#housingCon {
+.housingCon {
 	width: 100%;
 }
+.housingCon .rapper img{margin:auto; display:inline-block;}
+.housingCon .rapper{
+margin-right:35px;
+display:inline-block;
+text-align:center;
+color:rgb(220,220,220);
+font-weight:normal;
+font-size:14px;
+}
+.housingCon .rapperSelect{color:rgb(237,22,83)}
 #floatyLeft {
 	float: left;
 }
