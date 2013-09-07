@@ -42,7 +42,9 @@
             <div id="topBar3">
             <div id="cornerImg"><a href="../"><img src="img/keyLogo.png" class="mini"/></a></div>
             <a href="#" id="loginTrigger">
-                <input type="button" name="signIn" value="Sign In" id="si"/></a>
+			                <input type="button" name="signIn" value="Sign In" id="si" style="float:right"/></a>
+
+			<button class='pink' style="float:right; margin-right:5px">Post a Lease</button>
             
         </header>
         <!-- background dim -->
@@ -70,15 +72,15 @@
                     <!--<input id="datepicker" class="date" type="textbox" name="startdatebox" placeholder="Start " />
                     <input id="datepicker" class="date2" type="textbox" name="startdatebox" placeholder="End " />-->
 
-                    <a href="Results/"><div id="resultButton">
-                        <img src="img/searchicon.png" id="searchicon"/>&nbsp;Search</div></a>  
+                    <a href="Results/"><button class="blue">
+                        <img src="img/searchicon.png" id="searchicon"/>&nbsp;Search</button></a>  
                     &nbsp;-or-&nbsp;
                     <a href="Post/">
-                        <input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+                     <button class="blue">Post a Property</button></a>
                     <a href="#" id="menu-trigger2">Show More
-                        <input type="image" src="img/arrow2.png"  alt="#" class="more" /></a> 
+                        <span type="text" alt="#" class="more" />+</span></a> 
                     <a href="#" id="lessTrigger2" style="display:none;">Show Less
-                            <input type="image" id="upArrow"src="img/Up Arrow.png"  alt="#" class="more" /></a> 
+                            <span type="text" id="upArrow" style="position:relative; top:-2px" alt="#" class="more" />-<span style="margin-left:-1px; ">-</span></span></a> 
                 </div>
             </div>
             <!-- Advanced options box for search -->

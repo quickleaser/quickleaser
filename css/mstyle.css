@@ -33,13 +33,14 @@ html, body {
 }
 
 #homepage {
-	background-image: url(../img/bgcity4.jpg);
+	background-image: url(../img/bgcity6.jpg);
 	background-color:white;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
+#homepage header{border-bottom:2px solid rgb(220,220,220)}
 .Content {
 	min-height: 100%;
 }
@@ -527,9 +528,12 @@ img.mini3	{
 }
 #search-box {
 	font-size: 15px;
-	color: white;
+	color:rgb(71,138,251);
 	width: 100%;
 	text-align: left;
+	font-weight:bold;
+	
+
 }
 #search-box a {
 	text-decoration: none;
@@ -727,11 +731,13 @@ html {
 #split {
 	margin-left: auto;
 	margin-right: auto;
-	background-image: url(../img/30bar.png);
+	background-color:white;
 	width: 1000px;
 	padding: 10px;
 	margin-top:130px;
+	border:1px solid rgb(220,220,220);
 }
+input.search1{border:1px solid rgb(220,220,220)}
 #splitP {
 	background-image: url(../img/black3.png);
 	padding: 10px;
