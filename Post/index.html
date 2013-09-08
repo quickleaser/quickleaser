@@ -44,9 +44,9 @@
             <!-- Location and Date Search Box-->
                
                <div class="headerMiddle">
-                <input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
+                <input class="search1" type="textbox"  placeholder="City, State, or Zip Code" />
                 <a href="../Results/">
-                    <button class="blue"><img src="../img/searchicon.png" id="searchicon"/>Search</div></a>  
+                    <button class="blue"><img src="../img/searchicon.png" id="searchicon"/>Update Search</div></a>  
                    </div>  
 		
 		
@@ -90,26 +90,26 @@
                   <div id="typeDiv">
                     Property<label id="dot">&nbsp;*</label>
                       <div class="housingCon">
-                     <div class="rapper">   <img src="../img/HouseGrey.png" class="houseIcon" id="house" onclick=selectProp(this.id);>
+                     <div class="rapper" onclick=selectProp('house');>   <img src="../img/HouseGrey.png" class="houseIcon" id="house" >
 					 <br><span id="houseText">House</span></div>
-                      <div class="rapper">  <img src="../img/ApartmentGrey.png" class="houseIcon" id="apartment" onclick=selectProp(this.id);>
+                      <div class="rapper" onclick=selectProp('apartment');>  <img src="../img/ApartmentGrey.png" class="houseIcon" id="apartment" onclick=selectProp(this.id);>
                       <br><span id="apartmentText">Apartment/Condo</span></div>
-					 <div class="rapper"> <img src="../img/DuplexGrey.png" class="houseIcon" id="duplex" onclick=selectProp(this.id);>
+					 <div class="rapper" onclick=selectProp('duplex');> <img src="../img/DuplexGrey.png" class="houseIcon" id="duplex" onclick=selectProp(this.id);>
                       <br><span id="duplexText">Duplex</span></div>
-					  <div class="rapper" style="margin-right:0"><img src="../img/DormGrey.png" class="houseIcon" id="dorm" onclick=selectProp(this.id); style="margin-right:0">
+					  <div class="rapper" style="margin-right:0" onclick=selectProp('dorm');><img src="../img/DormGrey.png" class="houseIcon" id="dorm" onclick=selectProp(this.id); style="margin-right:0">
                      <br><span id="dormText">Dorm</span></div> </div>
                   </div>
                   </li>
 
 
                   <li>
-                    <div id="csz" style="">
+                    <div id="csz" style="font-weight:normal; margin-top:5px; margin-bottom:10px;">
 
                     <div class="bed" >
                       Bed <label id="dot">&nbsp;*</label>
                       <br />
                       <div class="filter-style4" >
-                      <select name="numBedrooms" id="numBedrooms" style="width:45px;" onchange="">
+                      <select name="numBedrooms" id="numBedrooms"  onchange="">
                         <option value="" selected=""></option>
                         <option value=".5">Efficiency</option>
                         <option value="1">1</option>
@@ -132,7 +132,7 @@
                       Bath <label id="dot">&nbsp;*</label>
                       <br />
                       <div class="filter-style4" >
-                      <select name="numBathrooms" id="numBathrooms" style="width:45px;"onchange="">
+                      <select name="numBathrooms" id="numBathrooms" onchange="">
                         <option value="" selected=""></option>
                         <option value="1">1</option>
                         <option value="1.5">1.5</option>

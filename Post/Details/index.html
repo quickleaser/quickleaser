@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link type="text/css" rel="stylesheet" href="../css/mstyle.css" />
+<link type="text/css" rel="stylesheet" href="../../css/mstyle.css" />
 <link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
-<link rel="stylesheet" href="../css/jquery-ui-1.10.3.custom.css" />
+<link rel="stylesheet" href="../../css/jquery-ui-1.10.3.custom.css" />
 <title>Lessor</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script src="../js/javaScript.js"></script>
+<script src="../../js/javaScript.js"></script>
 </head>
 <body>
 <div class="wrapper1">
@@ -29,26 +29,29 @@
                     </a>
                 </div>
           </div>
-          <div class="signUp"> <a href="../Registration/">Sign up now!</a> </div>
+          <div class="signUp"> <a href="../../Registration/">Sign up now!</a> </div>
         </div>
   	<header>
-        <div id="topBar2">
-            <div id="cornerImg"><a href="../"><img src="../img/keyLogo.png" class="mini"/></a></div>
+         <div id="topBar2">
+            <div id="cornerImg"><a href="../../"><img src="../../img/keyLogo.png" class="mini"/></a></div>
 
             <div class="searchTop"> 
             <a href="#" id="loginTrigger">
                 <input type="button" name="signIn" value="Sign In" id="si"/></a>
             <a href="../Post/">
-                <input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+              <button class="pink" style="float:right; margin-right:5px">Post a Property</button></a>
             
             <!-- Location and Date Search Box-->
                
                <div class="headerMiddle">
-                <input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
+                <input class="search1" type="textbox"  placeholder="City, State, or Zip Code" />
                 <a href="../Results/">
-                    <div id="resultButton"><img src="../img/searchicon.png" id="searchicon"/>Search</div></a>  
+                    <button class="blue"><img src="../../img/searchicon.png" id="searchicon"/>Update Search</div></a>  
                    </div>  
-        </div>
+		
+		
+		
+		
         </div>
         </header>
 			
@@ -63,10 +66,13 @@
 
 						<div class="post-nav">
 								<ul id="post-boxTab">
-									<li><a href="" id="pl1" style="border-radius: 2px 0px 0px 2px;color:rgb(161,161,161);background-color: white;">General</a></li>
-									<li><a href="Description/" id="pl2">Description</a></li>
-									<li><a href="Drag/" id="pl3">Photos</a></li>
-									<li><a href="Confirm/" id="pl4">Comfirm</a></li>
+								<li><a href="../" id="pl2">General</a></li>
+
+									<li><a href="" id="pl1" style="border-radius: 2px 0px 0px 2px;color:rgb(161,161,161);background-color: white;">Description</a></li>
+									
+									<li><a href="../Description/" id="pl2">Description</a></li>
+									<li><a href="../Drag/" id="pl3">Photos</a></li>
+									<li><a href="../Confirm/" id="pl4">Confirm</a></li>
 								</ul>
 						</div>
 
@@ -76,19 +82,32 @@
 						<div id="general">
 						
 							<div class="generalInfo">
-								<ul>
+								<ul style="margin-top:50px">
   
 	  <li ><div>Address <label id="dot">&nbsp;*</label>
-									<input type="text" name="address1" id="address1" class="maxLen" maxlength="60" placeholder=""></div>
+									<br><input type="text" name="address1" id="address1" style="width:98.2%; margin-left:0px;" maxlength="60" placeholder=""></div>
                   </li>
 									
 									<li style="margin-top:10px; ">
                     <div id="csz">
-                    <div id="stateDiv" >
+
+
+                  
+
+                    <div id="zipDiv">
+                     <span style="margin-left:-5px"> Zip Code</span> <label id="dot">&nbsp;*</label>
+                      <input type="text" name="zip" id="zip" class="myStyle" size="10">
+                    </div>
+
+                       <div id="cityDiv">
+                      City<label id="dot">&nbsp;*</label>
+                      <input type="text"></input>
+                    </div>
+					                    <div id="stateDiv" >
                       State <label id="dot">&nbsp;*</label>
-                      <div class="filter-style4" >
+                   <br>   <div class="filter-style4" >
                       <select id="state" name="state" style="width:155px;" onchange="populateCityDropdown(this.value)">
-                        <option value=""></option>
+                        <option value="">Select State</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -143,98 +162,12 @@
                       </select>
                       </div>
                     </div>
-
-                  
-
-                    <div id="zipDiv">
-                      Zip Code <label id="dot">&nbsp;*</label>
-                      <input type="text" name="zip" id="zip" class="myStyle" size="10">
-                    </div>
-
-                       <div id="cityDiv">
-                      City<label id="dot">&nbsp;*</label>
-                      <div class="filter-style4" >
-                      <select id="city" name="city" style="width:142px;" onchange="populateNeighborhoodDropdown(this.value)">
-                        <option value="">Select State</option>
-                      </select>
-                      </div>
-                    </div>
                     </div>
                   </li>
            
-                 
-                  <li>
-
-                  <div id="typeDiv">
-                    Type<label id="dot">&nbsp;*</label>
-                      <div id="housingCon">
-                        <img src="../img/HouseGrey.png" class="houseIcon">
-                        <img src="../img/ApartmentGrey.png" class="houseIcon">
-                        <img src="../img/DuplexGrey.png" class="houseIcon">
-                        <img src="../img/DormGrey.png" class="houseIcon">
-                      </div>
-                  </div>
-                  </li>
+          
 
 
-                  <li>
-                    <div id="csz" style="margin-top:10px;">
-
-                    <div class="bed" >
-                      Bed <label id="dot">&nbsp;*</label>
-                      <br />
-                      <div class="filter-style4" >
-                      <select name="numBedrooms" id="numBedrooms" style="width:155px;" onchange="">
-                        <option value="" selected=""></option>
-                        <option value=".5">Efficiency</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>  
-                        <option value="3">3</option>
-                        <option value="4">4</option> 
-                        <option value="5">5</option>
-                        <option value="6">6</option>  
-                        <option value="7">7</option> 
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10 or more</option> 
-                      </select>
-                      </div>
-                    </div>
-
-                  
-
-                    <div class="bath">
-                      Bath <label id="dot">&nbsp;*</label>
-                      <br />
-                      <div class="filter-style4" >
-                      <select name="numBathrooms" id="numBathrooms" style="width:143px;"onchange="">
-                        <option value="" selected=""></option>
-                        <option value="1">1</option>
-                        <option value="1.5">1.5</option>
-                        <option value="2">2</option>  
-                        <option value="2.5">2.5</option>
-                        <option value="3">3</option>
-                        <option value="3.5">3.5</option>
-                        <option value="4">4</option>
-                        <option value="4.5">4.5</option>
-                        <option value="5">5</option>
-                        <option value="5.5">5.5</option>
-                        <option value="6">6</option>
-                        <option value="6.5">6.5</option>
-                        <option value="7">7</option>
-                        <option value="7.5">7.5 or more</option>
-                      </select>
-                      </div>
-                    </div>
-
-
-                      <div class="ft">
-                        ft <sup>2</sup> {approx.}<br />
-                       <input type="text" name="sizeSquareFeet" id="sizeSquareFeet"  maxlength="20" placeholder="">
-                           </div>
-
-                      </div>
-                       </li>
 
 
 
@@ -243,22 +176,33 @@
                     <div class="monthlyPrice">
                       Monthly Price of Lease<label id="dot">&nbsp;*</label>
                       <br />
-									    <input type="text" name="pricePerMonthLease" id="pricePerMonthLease"  maxlength="20" placeholder="">
+						<span class="ltgrey">Between $</span><input type="text" class="priceBox" /><span class="ltgrey" ><span style="margin-right:10px"> and</span> $</span><input type="text" class="priceBox" />
                     </div>
                  
+				 <div class="calendarDiv" style="float:left; margin-right:20px">
+                      Start Date<label id="dot">&nbsp;*</label><br />
+                      <!--<input id="datepicker" type="textbox" name="startdatebox" placeholder="" />-->
+                      <img src="../../img/Calendar.png" style="width:215px;" />
+                    </div>
+                    <div class="calendarDiv">
+                       &nbsp;End Date<label id="dot">&nbsp;*</label><br />
+    							     <!--<input id="datepicker"type="textbox" name="startdatebox" placeholder="End Date" />-->
+                      <img src="../../img/Calendar.png" style="width:215px;" id="calendarPic" />
+                    </div>
                   </div>
-                  </li>
-                  <li>
+                  </li >
+                  <li >
                  
                   </li>
                   <br />
                   <br />
                   <br />
-                  <li><label id="dot">*</label> = <b>Required Field</b></li>
+                  <li style="width:400px; margin-top:200px" ><label id="dot">* Required Field</label></li>
                     
 								</ul>
-                
-								<a href="Description/" id="nextBut"><div id="wut">Next</div></a>
+                								<a href="../" id="prevBut"><button class="blue">Back</button></div></a>
+
+								<a href="../Description/" id="nextBut"><button class="blue">Next</button></div></a>
 							</div>
 						</div>
 						
@@ -278,13 +222,13 @@
 
 </div><!--closes the wrapper class -->
 
-<footer id="footer1">
+<footer id="footer">
   <div class="about3">
-      <a href="../Registration/" id="foot1">register  </a> |
-        <a href="../About/" id="foot2">about  </a> |
-        <a href="../Terms/" id="foot3">terms  </a> |
-        <a href="../Privacy/" id="foot4">privacy  </a> |
-        <a href="../Contact/" id="foot5"> contact us</a> 
+      <a href="../../Registration/" id="foot1">register  </a> |
+        <a href="../../About/" id="foot2">about  </a> |
+        <a href="../../Terms/" id="foot3">terms  </a> |
+        <a href="../../Privacy/" id="foot4">privacy  </a> |
+        <a href="../../Contact/" id="foot5"> contact us</a> 
     </div>
 </footer> 
  
