@@ -32,6 +32,7 @@ html, body {
   	Helvetica, Arial, "Lucida Grande", sans-serif;
 	position:relative;
 }
+p{font-size:14px; color:rgb(166,166,166);}
 
 #homepage {
 	background-image: url(../img/bgcity6.jpg);
@@ -1973,8 +1974,8 @@ background-color:white;
 }
 #photo	{
 	padding: 10px;
-	width: 410px;
-	border: 1px solid #ccc;
+	width: 100%;
+	position:relative;
 }
 #filler2	{
 	padding:5px;
@@ -2894,3 +2895,5 @@ background-color:rgb(237,22,83);
 .radio-button{background-color:rgb(71,138,251); width:15px; height:15px; display:inline-block; vertical-align:top; margin-right:5px;}
 .radio-button img{width:20px; position:relative; top:-8px; left:1px;}
 
+#dropPhoto{border:1px dashed rgb(166,166,166); width:95%; height:150px; position:absolute; left:0; }
+#dropPhoto p{position:relative; top:33%;}
