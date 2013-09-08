@@ -33,21 +33,20 @@
             <div class="searchTop"> 
             <a href="#" id="loginTrigger">
                 <input type="button" name="signIn" value="Sign In" id="si"/></a>
-            <a href="../../Post/">
-                <input id="pal" type="button" name="postLease" value="Post a Property" /></a>
+            <a href="../Post/">
+              <button class="pink" style="float:right; margin-right:5px">Post a Property</button></a>
             
             <!-- Location and Date Search Box-->
                
                <div class="headerMiddle">
-                <input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
-                <a href="../../Results/">
-                    <div id="resultButton"><img src="../../img/searchicon.png" id="searchicon"/>Search</div></a>  
+                <input class="search1" type="textbox"  placeholder="City, State, or Zip Code" />
+                <a href="../Results/">
+                    <button class="blue"><img src="../../img/searchicon.png" id="searchicon"/>Update Search</div></a>  
                    </div>  
-        </div>
         </div>
         </header>
 			
-      <div class="Content"> 
+      <div class="Content" style="padding-bottom:0px; "> 
 			<div id="middleContainer">
 				<form>
 				<div class="lessor-listbox">
@@ -58,6 +57,8 @@
 						<div class="post-nav">
 								<ul id="post-boxTab">
 									<li><a href="../" id="pl1">General</a></li>
+																		<li><a href="../Details" id="pl1">Details</a></li>
+
 									<li><a href="" id="pl2" style="border-radius: 2px 0px 0px 2px;color:rgb(161,161,161);background-color: white;">Description</a></li>
 									<li><a href="../Drag/" id="pl3">Photos</a></li>
 									<li><a href="../Confirm/" id="pl4">Comfirm</a></li>
@@ -69,49 +70,46 @@
 						<!-- Amenities -->
 						<div id="interior">
 							<div class="amenInfo">
-								<ul>
+								<ul style="margin-top:50px">
 
-                  <li>Property Name<br />
-                  <input type="text" name="propertyName" id="propertyName" style="width:100%; margin-bottom:10px;"maxlength="60" placeholder="">
+                  <li>Property Name  <span id="dot">*</span><br />
+                  <input type="text" name="propertyName" id="propertyName" style="width:100%; margin-bottom:10px; margin-top:5px;"maxlength="60" placeholder="">
                   <br />
-                  General Description<br />
-                    <textarea name="generalDescription" id="generalDescription" style="width:99.5%;" placeholder=""></textarea>
+                  Description <span id="dot">*</span><br />
+                    <textarea name="generalDescription" id="generalDescription" style="width:99.5%; height:75px; resize:none; margin-top:5px;" placeholder=""></textarea>
                     </li>
 
+<div style="margin-top:5px">
+                  Amenities<br><br>
+				  <div class="radio-wrap" onclick="check('furn');"><div class="radio-button"><img src="" id='furn'/></div> <p>Furnished</p></div>
+                <div class="radio-wrap"  onclick="check('park');"><div class="radio-button"><img src="" id='park'/></div> <p>Parking</p></div>
+				  <div class="radio-wrap" onclick="check('vid');"><div class="radio-button"><img src="" id='vid'/></div> <p>Video Security</p></div>
+				  <div class="radio-wrap" onclick="check('priv');"><div class="radio-button"><img src="" id='priv'/></div> <p>Private Bedroom</p></div>
+				  <div class="radio-wrap" onclick="check('dish');"><div class="radio-button"><img src="" id='dish'/></div> <p>Dishwasher</p></div>
+				  <div class="radio-wrap" onclick="check('club');"><div class="radio-button"><img src=""/ id='club'></div> <p>Clubhouse</p></div>
+				  <div class="radio-wrap" onclick="check('stain');"><div class="radio-button"><img src=""/ id='stain'></div> <p>Stainless Steel</p></div>
+				  <div class="radio-wrap" onclick="check('pet');"><div class="radio-button"><img src=""/ id='pet'></div> <p>Pet Friendly </p></div>
+				  <div class="radio-wrap" onclick="check('closet');"><div class="radio-button"><img src=""/ id='closet'></div> <p>Walk in Closet</p></div>
+				  <div class="radio-wrap" onclick="check('alarm');"><div class="radio-button"><img src=""/ id='alarm'></div> <p>Alarm System</p></div>
+				  				  <div class="radio-wrap" onclick="check('balc');"><div class="radio-button"><img src="" id='balc'/></div> <p>Balcony</p></div>
+				  <div class="radio-wrap" onclick="check('elev');"><div class="radio-button"><img src="" id='elev'/></div> <p>Elevators</p></div>
+				  <div class="radio-wrap" onclick="check('gate');"><div class="radio-button"><img src="" id='gate'/></div> <p>Gated Comm.</p></div>
+				  <div class="radio-wrap" onclick="check('gym');"><div class="radio-button"><img src="" id='gym'/></div> <p>Gym</p></div>
+				  <div class="radio-wrap" onclick="check('study');"><div class="radio-button"><img src="" id='study'/></div> <p>Study Room</p></div>
+				  				  <div class="radio-wrap" onclick="check('wash');"><div class="radio-button"><img src="" id='wash'/></div> <p>Washer/Dryer</p></div>
+				  <div class="radio-wrap" onclick="check('ac');"><div class="radio-button"><img src="" id='ac'/></div> <p>Central A/C</p></div>
+				  <div class="radio-wrap" onclick="check('bus');"><div class="radio-button"><img src="" id='bus'/></div> <p>Nearby Bus</p></div>
+				  <div class="radio-wrap" onclick="check('pool');"><div class="radio-button"><img src="" id='pool'/></div> <p>Pool</p></div>
+				  <div class="radio-wrap" onclick="check('handi');"><div class="radio-button"><img src="" id='handi'/></div> <p>Handicap Acc. </p></div>
+</div>
 
-									<li>
-                  <div id="csz" >
-                    <div class="calendarDiv">
-                      Start Date<label id="dot">&nbsp;*</label><br />
-                      <!--<input id="datepicker" type="textbox" name="startdatebox" placeholder="" />-->
-                      <img src="../../img/Calendar.png" style="width:215px;" />
-                    </div>
-                    <div class="calendarDiv">
-                       &nbsp;End Date<label id="dot">&nbsp;*</label><br />
-    							     <!--<input id="datepicker"type="textbox" name="startdatebox" placeholder="End Date" />-->
-                      <img src="../../img/Calendar.png" style="width:215px;" id="calendarPic" />
-                    </div>
-                  </div>
-                  </li>
-					<li>
-                  <br />
-                  <br />
-                  <input type="checkbox" name="furn" value="1" />Furnished</li>
-                       				<li><input type="checkbox" name="park" value="1" />Parking spot</li>
-                        			<li><input type="checkbox" name="wash" value="1" />Washer/Dryer</li>
-                        			<li><input type="checkbox" name="ac" value="1" />Central A/C</li>
-                        			<li><input type="checkbox" name="dish" value="1" />Dishwasher</li>
-                        			<li><input type="checkbox" name="pool" value="1" />Pool</li>
-                        			<li><input type="checkbox" name="pet" value="1" />Pet friendly</li>
-                        			<li><input type="checkbox" name="gym" value="1" />Gym</li>
-                        			<li><input type="checkbox" name="balcony" value="1" />Balcony</li>
+                  <li style="width:400px; margin-top:20px; margin-bottom:5px; font-size:14px;" ><label id="dot">* Required Field</label></li>
+
                     			</ul>
                     		</div>
-                        <br />
-                        <br />
-							<a href="../" id="prevBut"><div id="wut">Previous</div></a>
-							<a href="../Drag/" id="nextBut2"><div id="wut">Next</div></a>
-							<br style="clear:both;"/>
+                       	<a href="../" id="prevBut"><button class="blue">Back</button></a>
+
+								<a href="../Drag/" id="nextBut"><button class="blue">Next</button></a>
 						</div>
 
 						
@@ -126,7 +124,7 @@
 
 </div><!--closes the wrapper class -->
 
-<footer id="footer1">
+<footer id="footer">
   <div class="about3">
       <a href="../../Registration/" id="foot1">register  </a> |
         <a href="../../About/" id="foot2">about  </a> |
@@ -140,3 +138,18 @@
 
 </body>
 </html>
+<script>
+function check(x){
+if(document.getElementById(x).className == "checked") {
+document.getElementById(x).src="../../img/blank.png";
+document.getElementById(x).className = "unchecked";
+}
+else {
+document.getElementById(x).className="checked";
+document.getElementById(x).src="../../img/check.png";
+}
+}
+
+
+
+</script>
