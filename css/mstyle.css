@@ -128,11 +128,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', end
 .headerMiddle .search1 {
 	width:588px;
 	margin-left:15px;
-border:1.5px solid rgb(156,156,156	);
+border:1px solid rgb(156,156,156);
 color:rgb(71,138,251);
 font-size:18px;
 font-weight:bold;
 margin-right:0;
+
 }
 
 button{vertical-align:top}
@@ -1902,10 +1903,11 @@ background-color:white;
 }
 
 .post-nav {
-	height: 10px;
+	height: 27.5px;
 	padding: 0;
 	margin: 0;
 	border: none;
+	z-index:10;
 }
 .post-nav li {
 	float: left;
