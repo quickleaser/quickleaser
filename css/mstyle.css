@@ -2892,7 +2892,7 @@ button.pink{
 background-color:rgb(237,22,83);
 }
 
-.radio-wrap{display:inline-block; width:140px; cursor:pointer; margin-bottom:8px;  margin-right:20px;}
+.radio-wrap{display:inline-block; width:140px; cursor:pointer; margin-bottom:8px;  margin-right:20px; }
 .radio-wrap p{margin:0; display:inline-block; position:relative; top:-1px; color:rgb(166,166,166); font-size:14px;}
 .radio-button{background-color:rgb(71,138,251); width:15px; height:15px; display:inline-block; vertical-align:top; margin-right:5px;}
 .radio-button img{width:20px; position:relative; top:-8px; left:1px;}

@@ -68,7 +68,7 @@
 								<ul id="post-boxTab">
 								<li><a href="../" id="pl2">General</a></li>
 
-									<li><a href="" id="pl1" style="border-radius: 2px 0px 0px 2px;color:rgb(161,161,161);background-color: white;">Description</a></li>
+									<li><a href="" id="pl1" style="border-radius: 2px 0px 0px 2px;color:rgb(161,161,161);background-color: white;">Details</a></li>
 									
 									<li><a href="../Description/" id="pl2">Description</a></li>
 									<li><a href="../Drag/" id="pl3">Photos</a></li>
@@ -180,12 +180,12 @@
                     </div>
                  
 				 <div class="calendarDiv" style="float:left; margin-right:20px">
-                      Start Date<label id="dot">&nbsp;*</label><br />
+                      Possible Start Dates<label id="dot">&nbsp;*</label><div class="radio-wrap" onclick="check('startD');" style="margin:0;margin-left:33px;width:50px"><div class="radio-button"><img src="" id='startD'/></div><p style="top:-2px">Any</p></div><br />
                       <!--<input id="datepicker" type="textbox" name="startdatebox" placeholder="" />-->
                       <img src="../../img/Calendar.png" style="width:215px;" />
                     </div>
                     <div class="calendarDiv">
-                       &nbsp;End Date<label id="dot">&nbsp;*</label><br />
+                       &nbsp;Possible End Dates<label id="dot">&nbsp;*</label><div class="radio-wrap" onclick="check('endD');" style="margin:0;margin-left:37px;width:50px"><div class="radio-button"><img src="" id='endD'/></div><p style="top:-2px">Any</p></div><br />
     							     <!--<input id="datepicker"type="textbox" name="startdatebox" placeholder="End Date" />-->
                       <img src="../../img/Calendar.png" style="width:215px;" id="calendarPic" />
                     </div>
@@ -236,3 +236,18 @@
 
 </body>
 </html>    
+<script>
+function check(x){
+if(document.getElementById(x).className == "checked") {
+document.getElementById(x).src="../../img/blank.png";
+document.getElementById(x).className = "unchecked";
+}
+else {
+document.getElementById(x).className="checked";
+document.getElementById(x).src="../../img/check.png";
+}
+}
+
+
+
+</script>
