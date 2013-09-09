@@ -2939,13 +2939,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0c4de', end
 
 .accountPage #inbox{width:380px; display:inline-block; margin-right:20px; vertical-align:top; border:1px solid rgb(166,166,166);}
 .accountPage #top{background-color:rgb(220,220,220); height:35px;}
-.accountPage #inBody{display:inline-block; width:694px; background-color:red; height:300px;}
+.accountPage #inBody{display:inline-block; width:694px; }
 .inSearch{width:180px; height:23.5px; position:relative; top:3px; font-size:14px; padding-left:2px; display:inline-block;}
 
 .accountPage ul{list-style-type:none; padding:0; margin:0; text-align:left; }
 .accountPage ul li input{margin-left:5px}
 .accountPage ul li{border-bottom:1px solid rgb(220,220,220); cursor:pointer; padding:8px 0;}
 .accountPage ul li:last-child{border-bottom:none}
-.accountPage ul li:hover{background-color:rgb(242,242,242);}
+.accountPage #inbox ul li:hover{background-color:rgb(242,242,242);}
 .accountPage ul h3{font-size:14px; font-weight:bold; margin:0; display:inline-block;	position:relative; top:-1px; margin-left:5px;}
 .accountPage ul p{margin:0; font-size:14px; font-weight:normal; display:inline-block; color:black; position:relative; top:-1px; margin-left:68px;}
+
+#inBody h3{padding:0; margin:0; text-align:left; padding:8px 0; border-bottom:1px solid black;}
+#inBody .subjectLine .name{font-size:14px; font-weight:bold; text-align:left; display:inline-block; width:49%; color:black}
+#inBody .subjectLine .date{font-size:14px; font-weight:normal; text-align:right; display:inline-block; width:48%; color:black}
+#inBody .subjectLine{width:100%}
+#inBody .body{width:100%; font-size:14px; font-weight:normal; margin-top:5px;}
+#inBody ul li{border-bottom:1px solid black; padding-top:10px; padding-bottom:15px;  cursor:auto;}
+#inBody ul li:last-child{border-bottom:none;}
+#inBody .reply{resize:none;width:99%; height:90px;}
