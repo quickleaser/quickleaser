@@ -27,9 +27,8 @@ html, body {
 	margin: 0;
 	padding: 0;
 	outline: 0;
+	font-family:Arial;
 	height: 100%;
-	font-family:Univers, 
-  	Helvetica, Arial, "Lucida Grande", sans-serif;
 	position:relative;
 }
 p{font-size:14px; color:rgb(166,166,166);}
