@@ -4,54 +4,75 @@
 <link type="text/css" rel="stylesheet" href="../../css/mstyle.css" />
 <link rel="shortcut icon" href="http://i.imgur.com/Q7jjHYy.png">
 <link rel="stylesheet" href="../../css/jquery-ui-1.10.3.custom.css" />
-<title>Alerts</title>
+<title>Lessor</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="../../js/javaScript.js"></script>
-<link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 <body>
-    <div class="wrapper">
-   <!-- background dim -->
-		<div id="dim" style="display:none;"> </div>  
-			<!-- login box -->
-			<div id="loginBox" style="display: none">
-				<div id="between">
-					<input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
-					<input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
-					<div id="logs">
-						<input id="remember" type="checkbox" name="remember" />Remember Me
-						<a href="" id="signIn"><div id="sign-in">Sign In</div></a>
-					</div>
-				</div>
-				<div class="signUp"> <a href="../../Registration/">Sign up now!</a> </div>
-			</div>
-		<header>
-			<div id="topBar2">
-				<div id="cornerImg"><a href="../../"><img src="../../img/keyLogo.png" class="mini"/></a></div>
-				<div class="searchTop"> 
-					<a href="#" id="loginTrigger"><input type="button" name="signIn" value="Sign In" id="si"/></a>
-					<a href="../../Post/"><input id="pal" type="button" name="postLease" value="Post a Property" /></a>
-					<div class="headerMiddle">
-						<input class="search1" type="textbox" name="searchbox" placeholder="City, State, or Zip Code" />
-						<a href="../../Results/"><div id="resultButton"><img src="../../img/searchicon.png" id="searchicon"/>Search</div></a>  
-					</div>  
-				</div>
-			</div>
-		</header>
-    	<div class="midSection">
-    		<h1>Alerts</h1>
-    	</div><!--closes the middle content div-->
-	</div><!--closes the wrapper class -->
-<!-- static footer-->
-<footer id="footer1">
-	<div class="about3">
-    	<a href="../../Registration/" id="foot1">register  </a> |
+<div class="wrapper1">
+    <!-- background dim -->
+    <div id="dim" style="display:none;"> </div>  
+      <!-- login box -->
+      <div id="loginBox" style="display: none">
+        <div id="between">
+          <input id="userName" type="textbox" name="name" placeholder="Email" onClick="selectText(this);" />
+          <input id="pWord" type="textBox" name="password" placeholder="Password" onClick="selectText(this);" />
+          <div id="logs">
+            <input id="remember" type="checkbox" name="remember" />Remember Me
+            <a href="" id="signIn"><div id="sign-in">Sign In</div></a>
+          </div>
+        </div>
+        <div class="signUp"> <a href="../../Registration/">Sign up now!</a> </div>
+      </div>
+     <header>
+        <div id="topBar2">
+            <div id="cornerImg"><a href="../../"><img src="../../img/keyLogo.png" class="mini"/></a></div>
+
+  <div class="searchTop"> 
+            <a href="#" id="loginTrigger">
+                <input type="button" name="signIn" value="Sign In" id="si"/></a>
+            <a href="../../Post">
+              <button class="pink" style="float:right; margin-right:5px">Post a Property</button></a>
+            
+            <!-- Location and Date Search Box-->
+               
+               <div class="headerMiddle">
+                <input class="search1" type="textbox"  placeholder="City, State, or Zip Code" />
+                <a href="../../Results/">
+                    <button class="blue"><img src="../../img/searchicon.png" id="searchicon"/>Update Search</div></a>  
+                   </div> 
+        </div>
+        </header>
+			
+      <div class="Content" > 
+			<div id="middleContainer" style="position:relative" class="accountPage">
+	<h2>Account <div id="accountNav">
+	<a href="../Alerts"><div class="item left selected"><span class="w">Alerts</span></div></a>
+			<a href="../Favorite"><div class="item"><span class="w">Favorites</span></div></a>
+	<a href="../Roommate"><div class="item "><span class="w">Roommate</span></div></a>
+	<a href="../Messages"><div class="item  right"><span class="w">Messages</span></div></a>
+
+
+	</div></h2>
+				
+	</div><!-- closes the middle container -->
+</div><!-- closes the midContent section -->
+
+</div><!--closes the wrapper class -->
+
+<footer id="footer">
+  <div class="about3">
+      <a href="../../Registration/" id="foot1">register  </a> |
         <a href="../../About/" id="foot2">about  </a> |
         <a href="../../Terms/" id="foot3">terms  </a> |
         <a href="../../Privacy/" id="foot4">privacy  </a> |
         <a href="../../Contact/" id="foot5"> contact us</a> 
     </div>
-</footer>
+</footer> 
+ 
+<!-- dynamic footer for when the page expands because of content -->
+
 </body>
 </html>

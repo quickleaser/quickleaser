@@ -2898,3 +2898,40 @@ background-color:rgb(237,22,83);
 
 #dropPhoto{border:1px dashed rgb(166,166,166); width:95%; height:150px; position:absolute; left:0; }
 #dropPhoto p{position:relative; top:33%;}
+
+
+
+.accountPage{width:1000px;  }
+.accountPage h2{color:rgb(71,138,251); font-size:20px; text-align:left; margin:0; position:relative; }
+.accountPage #accountNav{
+
+background: rgb(71,138,251); /* Old browsers */
+z-index:-1;
+white-space:no-wrap;
+margin-left:5px;  border-radius:5px; display:inline-block; height:22px;border:1px solid rgb(126,126,126); vertical-align:top;}
+.accountPage #accountNav .item{	
+border-right:1px solid rgb(146,146,146);
+cursor:pointer;
+width:100px;
+display:inline-block;
+color:white;
+font-size:14px;
+height:100%;
+vertical-align:top;
+padding:0;
+margin:0;
+float:left; text-align:center;
+background: #00b7ea; /* Old browsers */
+background: -moz-linear-gradient(top, #00b7ea 0%, rgb(71,138,251) 92%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(92%,rgb(71,138,251))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #00b7ea 0%,rgb(71,138,251) 92%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #00b7ea 0%,rgb(71,138,251) 92%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #00b7ea 0%,rgb(71,138,251) 92%); /* IE10+ */
+background: linear-gradient(to bottom, #b0c4de 0%,rgb(71,138,251) 92%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='rgb(71,138,251)',GradientType=0 ); /* IE6-9 */
+ }
+ .item .w{position:relative; top:2px;}
+.accountPage #accountNav .item.selected{background:rgb(71,138,251);}
+.accountPage #accountNav .item.leftOf{border-top-right-radius: 5px;}
+.accountPage #accountNav .item.left{border-top-left-radius:5px; border-bottom-left-radius:5px;}
+.accountPage #accountNav .item.right{border-top-right-radius:5px; border-bottom-right-radius:5px;}
