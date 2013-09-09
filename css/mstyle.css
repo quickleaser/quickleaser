@@ -2938,6 +2938,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0c4de', end
 
 
 .accountPage #inbox{width:380px; display:inline-block; margin-right:20px; vertical-align:top; border:1px solid rgb(166,166,166);}
-.accountPage #top{background-color:#b0c4de; height:35px;}
+.accountPage #top{background-color:rgb(220,220,220); height:35px;}
 .accountPage #inBody{display:inline-block; width:694px; background-color:red; height:300px;}
 .inSearch{width:180px; height:23.5px; position:relative; top:3px; font-size:14px; padding-left:2px; display:inline-block;}
+
+.accountPage ul{list-style-type:none; padding:0; margin:0; text-align:left; }
+.accountPage ul li input{margin-left:5px}
+.accountPage ul li{border-bottom:1px solid rgb(220,220,220); cursor:pointer; padding:8px 0;}
+.accountPage ul li:last-child{border-bottom:none}
+.accountPage ul li:hover{background-color:rgb(242,242,242);}
+.accountPage ul h3{font-size:14px; font-weight:bold; margin:0; display:inline-block;	position:relative; top:-1px; margin-left:5px;}
+.accountPage ul p{margin:0; font-size:14px; font-weight:normal; display:inline-block; color:black; position:relative; top:-1px; margin-left:68px;}
