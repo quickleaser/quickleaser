@@ -2877,6 +2877,12 @@ button.blue{
 	background-color:rgb(71,138,251);
 
 }
+
+
+button.grey{
+	background-color:rgb(166,166,166);
+
+}
 button.pink:hover	{
 	background: pink; /* Old browsers */
 background: -moz-linear-gradient(top, #ffb6c1 0%, rgb(237,22,83) 92%); /* FF3.6+ */
@@ -2901,7 +2907,7 @@ background-color:rgb(237,22,83);
 
 
 
-.accountPage{width:1100px;  }
+.accountPage{width:1100px;  font-size:14px;}
 .accountPage h2{color:rgb(71,138,251); font-size:20px; text-align:left; margin:0; position:relative; margin-bottom:10px; }
 .accountPage #accountNav{
 
@@ -2946,7 +2952,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0c4de', end
 .accountPage ul li input{margin-left:5px}
 .accountPage ul li{border-bottom:1px solid rgb(220,220,220); cursor:pointer; padding:8px 0; position:relative;}
 .accountPage ul li:last-child{border-bottom:none}
-.accountPage #inbox ul li:hover{background-color:rgb(242,242,242);}
+.accountPage #inbox ul li:hover, .accountPage #inbox .selected{background-color:rgb(242,242,242);}
 .accountPage ul h3{font-size:14px; font-weight:bold; margin:0; display:inline-block;	position:relative; top:-1px; margin-left:5px;}
 .accountPage ul li p{margin:0; font-size:14px; font-weight:normal; display:inline-block; color:black; position:absolute; left:50%; top:10px;}
 
@@ -2958,3 +2964,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0c4de', end
 #inBody ul li{border-bottom:1px solid black; padding-top:10px; padding-bottom:15px;  cursor:auto;}
 #inBody ul li:last-child{border-bottom:none;}
 #inBody .reply{resize:none;width:99%; height:90px; padding:5px;}
+
+
+
+/*alerts*/
+.accountPage #alertBox{width:100%; display:block; position:relative; border:1px solid rgb(166,166,166);}
+.accountPage #alertBox .info{font-weight:normal;}
+.accountPage .bed1, .bath1, .time,.type{font-weight:bold; font-size:14px;}
+.accountPage .buttons{position:absolute; right:5px;  top:4px;}
+.accountPage .buttons img{position:relative; top:-3px}
+.accountPage .info{position:absolute; left:150px; top:10px; font-size:14px;}
+.accountPage .city{font-weight:bold; font-size:14px; position:relative;  top:2px;}
+.accountPage button{margin-right:10px; width:90px;}
+#alertBox ul li{border-bottom:1px solid rgb(220,220,220); height:20px; padding-left:6px; padding-right:5px;}
+.accountPage #alertBox ul li:hover, .accountPage #inbox .selected{background-color:rgb(242,242,242);}
+.accountPage #alertBox ul li.paused:hover{background-color:rgb(220,220,220)}
+#alertBox ul li.paused{background-color:rgb(220,220,220); border:1px solid rgb(166,166,166);}
+#alertBox #alertBox ul li:last-child{border:none}
+
+.changeEmail{position:absolute;  min-width:130px; position:absolute; top:-2px; right:-11px;}
