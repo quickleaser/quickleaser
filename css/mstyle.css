@@ -2499,12 +2499,15 @@ cursor:pointer;
 width:1000px;
 	margin: 0 auto;
 margin-top:10px;
+color:black;
 	}
 
+	#property p{color:black}
 #property{
 	width:100%;
 	margin:auto;
 	text-align:center;
+	color:black;
 	}
 #property #left{
 	width:320px;
@@ -2525,7 +2528,7 @@ margin-top:10px;
 
 	
 	font-size:14px;
-	color:rgb(116,116,116);
+	color:black;
 	width:100%;
 	font-style:italic;
 }
