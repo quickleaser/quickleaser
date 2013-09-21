@@ -3006,3 +3006,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0c4de', end
 .listReal img{width:125px; height:150px}
 #maincontent .listReal .info{display:inline-block; vertical-align:top; text-align:center; width:165px; margin-left:5px; font-size:14px;}
 .listReal .info a{color:rgb(237,22,83); font-weight:bold;}
+
+
+
+/*favorites*/
+.favoritesLeft{width:700px; display:inline-block;}
+.favoritesLeft img{width:200px; height:125px;}
+.favoritesLeft h2 img{width:25px; height:auto;}
+.favoritesLeft span{position:relative; top:-12px; margin-left:5px}
+.favoritesLeft ul li{background-color:rgb(246,246,246); border-bottom:1px solid rgb(220,220,220); padding:10px; cursor:auto; position:relative;}
+.favoritesRight{width:396px; display:inline-block;}
+.favoritesLeft ul li .info{display:inline-block; width:470px; margin-left:70px; line-height:auto;  }
+.favoritesLeft h2{margin:0;padding:0; margin-bottom:10px;}
+.favoritesLeft ul li p{margin-bottom:0; position:relative; display:block; left:30px; top:-20px;}
+.favoritesLeft ul li h3{position:absolute; top:105px; cursor:pointer; color:rgb(237,22,83);}
+.favoritesLeft ul li h3 img{width:13px; height:auto; margin-right:10px; position:relative; top:1px;}
