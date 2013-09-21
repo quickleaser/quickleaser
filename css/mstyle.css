@@ -765,7 +765,7 @@ html {
 	background-color:white;
 	width: 1000px;
 	padding: 10px;
-	margin-top:130px;
+	margin-top:15%;
 	border:1px solid rgb(220,220,220);
 }
 input {border:1.5px solid rgb(156,156,156	)}
@@ -2054,9 +2054,13 @@ margin-bottom:10px
 }
 
 #searchicon	{
-	width:12px;
-	margin-right:5px;
+	width:14px;
+	margin-right:8px;
+	
 }
+#posticon{width:14px; margin-right:8px; }
+.postT{position:relative; top:-4px;}
+.searchT{position:relative; top:-1px;}
 #optionbuttons	{
 	border: 1px groove black;
 	width:210px;
@@ -2975,7 +2979,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0c4de', end
 .accountPage #alertBox .info{font-weight:normal;}
 .accountPage .bed1, .bath1, .time,.type{font-weight:bold; font-size:14px;}
 .accountPage .buttons{position:absolute; right:5px;  top:4px;}
-.accountPage .buttons img{position:relative; top:-3px}
+.accountPage .buttons img{position:relative; top:-3px; width:30px}
+.accountPage #greyTrash{width:23px; top:-.5px; left:-3px; margin-left:7px;}
+
 .accountPage .info{position:absolute; left:150px; top:10px; font-size:14px;}
 .accountPage .city{font-weight:bold; font-size:14px; position:relative;  top:2px;}
 .accountPage button{margin-right:10px; width:90px;}
