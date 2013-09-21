@@ -3013,7 +3013,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0c4de', end
 .favoritesLeft{width:700px; display:inline-block;}
 .favoritesLeft img{width:200px; height:125px;}
 .favoritesLeft h2 img{width:25px; height:auto;}
-.favoritesLeft span{position:relative; top:-12px; margin-left:5px}
+.favoritesLeft span{position:relative; top:-13px; margin-left:5px}
 .favoritesLeft ul li{background-color:rgb(246,246,246); border-bottom:1px solid rgb(220,220,220); padding:10px; cursor:auto; position:relative;}
 .favoritesRight{width:396px; display:inline-block;}
 .favoritesLeft ul li .info{display:inline-block; width:470px; margin-left:70px; line-height:auto;  }
