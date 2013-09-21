@@ -2518,6 +2518,7 @@ color:black;
 	display:inline-block;
 	text-align:left;
 	padding-right:10px;
+	position:relative;
 }
 
 #property #left #generalInfo h3{
@@ -2636,7 +2637,7 @@ margin-top:10px;
 	width:650px;
 	display:inline-block;
 	background-color:white;
-	
+	position:relative;
 	vertical-align:top;
 	text-align:left;
 }
@@ -2992,3 +2993,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0c4de', end
 #alertBox #alertBox ul li:last-child{border:none}
 
 .changeEmail{position:absolute;  min-width:130px; position:absolute; top:-2px; right:-11px;}
+
+/*listing ads*/
+.listAds{width:100%; text-align:center; margin-bottom:25px; font-size:14px; line-height:18px; position:absolute; top:525px; padding-bottom:25px;}
+.listAds .item h4{text-align:center; margin:0; padding:0; color:rgb(237,22,83);}
+#maincontent .listAds .item p{margin:0 auto; padding:0; text-align:center; margin:0 70px;}
+.listAds .item img{width:200px; height:125px;}
+.listAds .item{display:inline-block; text-align:center;}
+.listAds .item a{color:#488BFE; font-weight:bold}
+
+.listReal{position:absolute; top:525px; background-color: rgb(242,242,242); width:300px; padding:10px; }
+.listReal img{width:125px; height:150px}
+#maincontent .listReal .info{display:inline-block; vertical-align:top; text-align:center; width:165px; margin-left:5px; font-size:14px;}
+.listReal .info a{color:rgb(237,22,83); font-weight:bold;}
