@@ -671,7 +671,7 @@ html {
 	background: url(../img/testB.png) no-repeat right #FFF;
 	overflow: hidden;
 		background-position:90% 1px;
-	background-size:34%;
+	background-size:21px;
 	cursor:pointer;
 	border:1px solid rgb(166,166,166);
 	width:60px;
@@ -3021,3 +3021,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0c4de', end
 .favoritesLeft ul li p{margin-bottom:0; position:relative; display:block; left:30px; top:-20px;}
 .favoritesLeft ul li h3{position:absolute; top:105px; cursor:pointer; color:rgb(237,22,83);}
 .favoritesLeft ul li h3 img{width:13px; height:auto; margin-right:10px; position:relative; top:1px;}
+
+
+.infoEdit{position:absolute; right:10px; top:70px;}
+#editDiv{position:absolute; top:100px; width:87.8%; display:none; background-color:white; z-index:1; padding:10px; border:1px solid rgb(166,166,166);}
+#editDiv p{margin:0; padding:0}
+#editDiv input.long, #editDiv .filter-style3{width:98%; border:1px solid rgb(166,166,166); margin-bottom:5px;}
+#maincontent #editDiv .filter-style3 {	background-size:17px;	background-position:96% 2px;margin:0; padding:0; margin-top:2px; height:18px; vertical-align:top;
+}
+#editDiv .thirdWrap{display:inline-block; width:31%; vertical-align:top; margin-right:5px;}
+#editDiv button{margin:2px;  margin-top:10px; float:right}
